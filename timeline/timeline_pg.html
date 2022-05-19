@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<link href="fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+
+<meta name="description" content="The HTML5 Herald""/>
+<link rel="stylesheet" href="" />
+
+</head>
+<style> 
+    #month {
+    display:inline-block;
+    }
+#month div{
+    display: inline-block;
+
+    background-color:orange;
+    color:white;
+    padding :20px;
+    margin-left :0px;
+    margin-right: 0px;
+    width:100px;
+    height:20px;
+    text-align:left;
+    z-index: -1;
+
+}
+
+
+
+
+#month svg{
+    display: inline-block;
+    position: absolute; 
+
+    color:white;
+    padding :20px;
+    top:0;
+    left:0;
+    margin-left :0px;
+    margin-right: 0px;
+    width:100px;
+    height:100px;
+    text-align:center;
+    z-index: 0;
+
+}
+ #contain {
+     position: relative;
+     white-space: nowrap;
+
+     }
+
+#day_sec div{
+
+
+    background-color:black;
+    color:white;
+
+    margin-left :0px;
+    margin-right: 0px;
+    width:100px;
+    height:100px;
+    text-align:center;
+    z-index: -1;
+vertical-align: bottom;
+}    
+
+
+#type_sec div{
+
+    position:relative;
+    background-color:#f2f9ff;
+    color:white;
+
+    margin-left :0px;
+    margin-right: 0px;
+    width:100px;
+    height:100px;
+    text-align:center;
+    z-index: -1;
+vertical-align: bottom;
+}   
+
+
+#event_sec div{
+
+
+    background-color:#f2f9ff;
+    color:white;
+
+    margin-left :0px;
+    margin-right: 0px;
+    width:100px;
+    height:100px;
+    text-align:center;
+    z-index: -1;
+vertical-align: bottom;
+}   
+
+#day_sec {
+    width:100%;
+
+    
+}
+
+#dot_sec{
+
+}
+#dot_sec div{
+    background-color:#fff;
+    border-radius:5px;
+    position:absolute;
+    content:"";
+    height:10px;
+    z-index: 1; 
+    top:80px;
+   
+vertical-align: bottom;
+}    
+
+
+#card_sec div{
+    background-color:white;
+    border-radius:2px;
+    color: black;
+    content:"";
+    height:20px;
+    position:absolute;
+    padding :5px;
+   border:2px #FFAC55 solid;
+    z-index: 1;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}    
+#line_sec div{
+    background-color:white;
+    z-index: 0;   
+    color: black;
+    content:"";
+    height:20px;
+    width:1.5px;
+    position:absolute;
+
+}    
+
+
+.fa-exclamation-triangle:before  { 
+      color: #f09f1c;
+   padding-right: 5px; /* If you need more space b/w contents */
+}
+
+
+.fa-image:before  { 
+
+   padding-right: 5px; /* If you need more space b/w contents */
+}
+
+
+.fa-eye-dropper:before  { 
+
+   padding-right: 5px; /* If you need more space b/w contents */
+}
+
+</style>
+<body>
+    <div id="contain" style="overflow:auto;  height:550px;">
+        <div id="month"></div>
+        <div id="day_sec"></div>
+
+        <div id="type_sec"></div>
+        <div id="dot_sec"></div>
+        <div id="card_sec"></div>
+        <div id="line_sec"></div>
+        <div id="event_sec"></div>
+    </div>
+
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+<script type="text/javascript" src=".../util/messagingUtil.js"></script>
+<script type="text/javascript" src="../util/contentUtil.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
