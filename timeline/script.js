@@ -13,12 +13,18 @@ function onMessage(event) {
   if (event && event.data)
   {
       //process event.data
-      print(event.data)
+      console.log(event.data)
   }
 }
 
+va.messagingUtil.setOnDataReceivedCallback(a);
 
+function a(resultData) {
 
+      //process event.data
+      console.log(resultData)
+
+}
 
 
 
