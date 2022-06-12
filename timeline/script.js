@@ -1,4 +1,562 @@
 
+var datat= 
+{
+  "data":{
+    "columns":
+      [{"label":"執行日期"},	{"label":"執行時間"},{"label":"分隔"},{"label":"執行內容"},{"label":"簡碼"},{"label":"說明"}
+      , {"label":"HR"},{"label":"NBPd"},{"label":"NBPm"},{"label":"RESP"},{"label":"ABPm"},{"label":"ABPs"},{"label":"ABPd"},{"label":"NBPs"}]
+      ,
+    "data":[
+      ["20210101","12:00","8","CBC","LAB",
+      "AbsNeutro.#:   16231    Basophil:       0       Eosinophil:       0     Hematocrit:      31     Hemoglobin:      10     HgB:      10            Lymphocyte:       4"
+      ,"150","52","70","59","145","150","45","78"
+      ],
+      ["20210106","12:00","8","CBC","LAB",
+      "AbsNeutro.#:   16231    Basophil:       0       Eosinophil:       0     Hematocrit:      31     Hemoglobin:      10     HgB:      10            Lymphocyte:       4"
+      ,"150","52","70","59","145","150","45","78"
+      ]
+    ]
+  }
+}
+
+;
+let csvTest='variable,upper_bound,lower_bound\nHR,120,50\nRES,35,12\nNBPS,160,90\nNBPD,100,60\nNBPm,120,65\nABPS,160,90\nABPD,110,60\nABPm,110,65\nBT,38,35';
+let test=1;
+let VA_RESULT_NAME;
+let url = "file:///E:/git_hub/d3/timeline/lineChartBound.csv";
+url='https://10.70.12.114/test/linechart/lineChartBound.csv';
+url = "file:///E:/git_hub/d3/timeline/lineChartBound.csv";
+
+
+const getApi = async () => {
+
+  const resp = await fetch(url)  
+  return resp.text();
+  
+  }
+  
+if (window.addEventListener) {
+  // For standards-compliant web browsers
+  window.addEventListener("message", onMessage, false);
+} else {
+  window.attachEvent("onmessage", onMessage);
+}
+
+// Retrieve data and begin processing
+function onMessage(event) {
+  if (event && event.data )
+  {
+    VA_RESULT_NAME = event.data.resultName;
+      //process event.data
+      console.log(event.data);
+      if(validateData(event.data)){
+        const selections = [];
+        selections.push({ row: 0 });
+        console.log(selections);
+        console.log(VA_RESULT_NAME);
+        va.messagingUtil.postSelectionMessage(VA_RESULT_NAME, selections);
+        getApi().then((resp) => {
+            let thresholds =  csvToArray(resp).sort(function(a, b){
+            v1= a.variable.toLowerCase();
+            v2 = b.variable.toLowerCase();
+            if (v1 < v2) return -1;
+            if (v1 > v2) return 1;
+            return 0;});
+      
+          console.log(thresholds)
+          lineChart(event.data,thresholds);
+
+           });
+      }
+      
+
+  }
+  
+}
+
+va.messagingUtil.setOnDataReceivedCallback(a);
+
+function validateData(data) {
+  if (data) return true;
+  false;
+}
+Date.prototype.addDays = function(days) {
+  var dat = new Date(this.valueOf())
+  dat.setDate(dat.getDate() + days);
+  return dat;
+}
+
+var viewportwidth;
+var viewportheight;
+
+
+let leftMargin=5;
+let rightMargin=5;
+let topMargin=30;
+let axisBaseHeight=0;
+let axisLeft=0;
+let legendWidth=60;
+let tickPadding=20;
+
+let dateI=0;
+let interval=5;
+let dayWidth=50;
+let xAxisWidth=1000;
+let containerWidth;
+let startColIndex=6-1;
+let lineChartHeight=0;
+let timeChartHeight=0;
+
+
+function formatDate(){}
+function originGetBeginEndDay(){
+
+  if (startDay<interval)
+  {
+      startDay=1;   
+  }else {
+      
+      startDay=Math.floor(startDay%interval)===0? (Math.floor(startDay/interval)-1)*interval+1 :Math.floor(startDay/interval)*interval+1;
+      let lastDayOfMonth=get_end_of_month(begin);
+
+      if(startDay>lastDayOfMonth){
+          startDay=lastDayOfMonth;
+      }
+      
+  }  
+  startDay-=5;
+  if (endDay<interval)
+  {
+      endDay=1;   
+  }else {
+      
+      endDay= Math.floor(endDay%interval)===0? (Math.floor(endDay/interval))*interval:(Math.floor(endDay/interval)+1)*interval;
+      let lastDayOfMonth=get_end_of_month(end);
+
+      if(endDay>lastDayOfMonth){
+          endDay=lastDayOfMonth;
+      }
+}
+}
+function setXAxisSize(data) {
+
+
+  let dateArray = new Array();
+  var dateData=data.map(function(d) { return d[dateI] });
+  console.log(dateData);
+
+  let begin=  d3.min(dateData);
+  let end=  d3.max(dateData);
+  let startDay= parseInt(begin.substr(6,2));
+  let endDay= parseInt(end.substr(6,2));
+
+ 
+
+  startDate=get_date(begin,startDay);
+  endDate=get_date(end,endDay);
+
+  while (startDate<= endDate) {
+    console.log(startDate)
+    dateArray.push(startDate)
+    startDate = startDate.addDays(1);
+
+  }
+
+  // for(d in dateArray){
+  //     console.log(d.toString());
+  // }
+
+  dayWidth=viewportwidth/interval;
+  xAxisWidth=dayWidth*dateArray.length;
+
+  console.log(xAxisWidth)
+  return dateArray;
+}
+
+
+
+function resizeFromframe(data){
+
+     
+  // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+   
+  if (typeof window.innerWidth != 'undefined')
+  {
+       viewportwidth = window.innerWidth,
+       viewportheight = window.innerHeight
+  }
+   
+ // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+  
+  else if (typeof document.documentElement != 'undefined'
+      && typeof document.documentElement.clientWidth !=
+      'undefined' && document.documentElement.clientWidth != 0)
+  {
+        viewportwidth = document.documentElement.clientWidth,
+        viewportheight = document.documentElement.clientHeight
+  }
+   
+  else
+    {
+          viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
+          viewportheight = document.getElementsByTagName('body')[0].clientHeight
+    }
+
+    lineChartHeight=viewportheight/3
+    timeChartHeight=viewportheight/3
+    //-->
+  }
+
+function xScaleS(d){
+  return 10;
+}
+
+function lineChart(data,dateArray,columns,thresholds) {
+  //remove old
+  let containerHeight= lineChartHeight;
+  console.log(data);  
+  d3.select(".svg-container").remove();
+  d3.select("svg").selectAll("circle").remove();
+  
+  //refresh view point
+
+
+
+
+
+
+
+
+  let numCols=data[0].length;
+  let nums_variables=numCols-startColIndex-1;
+  let indexArray=[];
+  let variablesWidth=nums_variables*tickPadding;
+
+  axisBaseHeight=containerHeight*0.8;
+  axisLeft=leftMargin+variablesWidth+10;
+  containerWidth=xAxisWidth+axisLeft;
+ 
+
+
+
+
+
+  //let xaxisWidth=viewportwidth-leftMargin-legendWidth;
+
+  
+  //set canvas margins
+
+  var xName=columns[0].label;
+  //format the year 
+  var parseTime = d3.timeParse("%d%b%Y %H:%M:%S");
+  
+  // data.forEach(function (d) {
+
+  //     d[0] = parseTime(d[0]);
+  //     console.log(d[0]);
+  // });
+  
+  //scale xAxis 
+  var xExtent = d3.extent(data, d => d[0]);
+
+
+
+
+  var xData=dateArray;
+  
+  var xScale = d3
+  .scalePoint()
+  .domain([xData[0],xData[xData.length-1]])
+  .range([axisLeft, xAxisWidth]);
+  console.log("s xscale");
+  //scale yAxis
+
+  //we will draw xAxis and yAxis next
+
+//draw xAxis and xAxis label
+xAxis = d3.axisBottom()
+    .scale(xScale)
+
+d3.select("div#chartId")
+.style('height',containerHeight+'px')
+  .style('width',containerWidth+'px')
+  .append("div")
+  // // Container class to make it responsive.
+  .classed("svg-container", true) 
+  
+  .append("svg")
+  // Responsive SVG needs these 2 attributes and no width and height attr.
+  // .attr("preserveAspectRatio", "none")
+  // .attr("viewBox", "0 0 1200 900")
+  // Class to make it responsive.
+  .classed("svg-content-responsive", true)
+  // Fill with a rectangle for visualization.
+    .append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,"+axisBaseHeight+") ")
+    .call(xAxis)
+    .append("text")
+    .attr("x", axisLeft+(900)/2) //middle of the xAxis
+    .attr("y", "50") // a little bit below xAxis
+    .text(xName)
+
+    d3.select("svg")
+    .select(".axis")
+    .selectAll("text")
+    .attr("transform", function(d) {
+      return "translate(" + this.getBBox().height * -2 + "," + this.getBBox().height*1.5 + ")rotate(-45)"});
+    
+    // build y axis
+    for(let i =0;i<nums_variables;i++){
+      indexArray.push(i);
+    }
+
+    let color = d3.scaleLinear().domain([0,(data[0].length/2-1), data[0].length - 1]).range(["#4A4AFF","#1AFD9C", "#FFA042"])
+    console.log(data[0].length);
+
+
+
+    dataColumns = columns.slice(startColIndex)
+    //right legend
+    var boxWidth=10;
+    var legend = d3.select('svg').selectAll('.legend')
+    .data(dataColumns)
+    .enter()
+    .append('g')
+    .attr('class', 'legend');
+
+    legend.append('rect')
+    .attr('x', viewportwidth - legendWidth+5)
+    .attr('y', function(d, i) {
+      if (i==0) return -100;
+      return i * 15;
+    })
+    .attr('width', boxWidth)
+    .attr('height', boxWidth)
+    .style('fill', function(d, i) {
+      return color(i);
+    });
+
+    legend.append('text')
+    .attr('x', viewportwidth - legendWidth+boxWidth+10)
+    .attr('y', function(d, i) {
+      if (i==0) return -100;
+      return (i * 15)+9;
+    })
+    .text(function(d) {
+      return d.label;
+    });
+
+
+
+
+    //draw y axis, lines and circles
+     if(data[0].length>1){
+
+       for(let i =startColIndex; i<numCols;++i){
+
+        console.log("s yscale"+i);
+        columnName=columns[i].label;
+        let threshold=thresholds.find( d =>{ console.log( d.variable); return d.variable.toLowerCase()===columnName.toLowerCase()});
+        
+        console.log("find column:"+columnName);
+        // console.log("find threshold:"+threshold.upper_bound);       
+        drawLineAndPoint(columnName,data,color,i,xScale,threshold);
+       }
+     } 
+     console.log("s yscale");
+  
+   }
+
+
+   function csvToArray(str, delimiter = ",") {
+    // slice from start of text to the first \n index
+    // use split to create an array from string by delimiter
+    const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
+  
+    // slice from \n index + 1 to the end of the text
+    // use split to create an array of each csv value row
+    const rows = str.slice(str.indexOf("\n") + 1).split("\n");
+  
+    // Map the rows
+    // split values from each row into an array
+    // use headers.reduce to create an object
+    // object properties derived from headers:values
+    // the object passed as an element of the array
+    const arr = rows.map(function (row) {
+      row=row.split('\r')[0];
+      const values = row.split(delimiter);
+      const el = headers.reduce(function (object, header, index) {
+        object[header.trim()] = values[index];
+        return object;
+      }, {});
+      return el;
+    });
+  
+    // return the array
+    return arr;
+  }
+
+
+function drawLineAndPoint(columnName,data,color,i,xScale,threshold){
+//   var sumstat = d3.nest() 
+//   .key(d => d.media)
+//   .entries(data);
+
+// console.log(sumstat)
+
+
+// var body = d3.select('body');
+
+//    body.append('input')
+//        .attr('type','text')
+//        .attr('id','thresholdUp'+i)
+//        .attr('name','textInput')
+//        .attr('value','Text goes here').attr("transform", "translate("+startLeft+",0)") ;
+
+   
+//    body.append('input')
+//        .attr('type','text')
+//        .attr('id','thresholdLow'+i)
+//        .attr('name','textInput')
+//        .attr('value','Text goes here').attr("transform", "translate("+startLeft+",0)") ;
+
+
+var div = d3.select("#chartId").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+
+
+
+
+var yMax=(Math.floor(d3.max(data,d=>{
+  return d[i]
+})/10)+1)*10;
+console.log(yMax);
+
+
+if (!isNaN(yMax)){
+var  yScale = d3.scaleLinear().domain([0, yMax]).range([axisBaseHeight, topMargin])
+ticks=5;
+//yAxis and yAxis label
+var gap=yMax/ticks;
+let tickValues=[]
+for (let i =0;i<=ticks;i++){
+  tickValues.push(i*gap);
+}
+yAxis = d3.axisLeft()
+.scale(yScale)
+.tickValues(tickValues)
+.tickPadding(tickPadding*(i-startColIndex-1));
+
+d3.select('svg')
+.append("g")
+
+.attr("id", "yaxis"+i)
+.attr("class", "axis")
+.attr("transform", "translate("+axisLeft+",0)") //use variable in translate
+.call(yAxis)
+// .append("text")
+// .attr("transform", "rotate(-90)")
+// .attr("x", "-150")
+// .attr("y", "-50"-i*20)
+// .attr("text-anchor", "end")
+// .text("US Media Ad Spending (Billions)")
+
+d3.select('#yaxis'+i)
+.selectAll("text")
+.attr("fill", color(i));
+
+
+d3.select('#yaxis'+i)
+.append("text")
+.attr("x", tickPadding*(i-startColIndex-1))
+.text(columnName);
+
+
+//set color pallete for different vairables
+//select path - three types: curveBasis,curveStep, curveCardinal
+
+var lineDrawer= d3.line()
+    .defined(d=>d.y)
+    .x(d=>xScaleS(d.x))
+    .y(d=>yScale(d.y))
+    // .curve(d3.curveCardinal)
+;
+
+
+
+let maps=data.map(function(d) { 
+  yValue=d[i];
+  if (isNaN(d[i])) yValue=null;
+  return {x:d[0],y:yValue} });
+var svg=d3.select("svg");
+svg
+  // .selectAll(".line")
+  // .append("g")
+  // .attr("class", "line")
+  // .data(data)
+  // .enter()
+  .append("path")
+  .attr("d",lineDrawer(maps))
+  .attr("fill", "none")
+  .attr("stroke", d => color(i))
+  .attr("stroke-width", 2)
+  .attr("z-index", 1)
+  .attr("class","line"+i);
+var line = svg.select(".line"+i);  
+svg.selectAll(".circle"+i)
+.data(data)
+.enter()
+.append("circle")
+.attr("r", function(d) { return isNaN(d[i])  ? 0 : 3; })
+.attr("cx", d => xScaleS(d[0]))
+.attr("cy", d =>  yScale(d[i]))
+.style("fill", d => {
+  try { // statements to try
+    if (d[i]>threshold.upper_bound){
+      return "red";
+    }else if (d[i]<threshold.lower_bound){
+      return "yellow";
+    }
+  }
+  catch (e) {
+  }
+  return color(i);})
+  .on("mouseover", function(event,d) { 
+    console.log(event);
+    console.log(d);
+    let x =event.pageX;
+    let y =event.pageY;
+    div.transition()
+      .style("opacity", .9)
+      .style("left", (x) + "px")
+      .style("top", (y - 28) + "px");
+    div.html(columnName+" :"+d[i])
+
+
+    line.attr("stroke-width", 4);
+    })
+  .on("mouseout", function(d) {
+    div.transition()
+      .duration(10)
+      .style("left", 0 + "px")
+      .style("top", 0 + "px")
+      .style("opacity", 0);
+    line.attr("stroke-width", 3); 
+    });
+
+//append circle 
+
+  // .selectAll("circle")
+
+
+  }
+
+}
+
+
 
 
 
@@ -34,7 +592,6 @@ function a(resultData) {
 
 
 
-
 var svg =d3.select("#svgID");
 const card_horizen_gap=10;
 const invisible_pos=-9999;
@@ -56,24 +613,8 @@ function zoomed() {
 
 
 
-var datat= 
-    [
-      {"date":"20211106","time":"00:00:00","content":"血液腫瘤科","type":"class","obj":""},
-      {"date":"20211106","time":"00:00:00","content":"血液腫瘤科","type":"class","obj":""},
 
-      {"date":"20211106","time":"00:10:00","content":"血液腫瘤科","type":"class","obj":""},
-      {"date":"20201106","time":"00:00:00","content":"血液腫瘤科","type":"class","obj":""},
-      {"date":"20211112","time":"00:00:00","content":"血液腫瘤科","type":"class","obj":""},
-    {"date":"20211106","time":"00:00:00","content":"血液腫瘤科","type":"class","obj":""},
-    {"date":"20211106","time":"00:00:00","content":"血液腫瘤科住院","type":"class_bar_start","bar_id":"1"},
-    {"date":"20211112","time":"00:00:00","content":"血液腫瘤科住院","type":"class_bar_end","bar_id":"1"},
-  
-    ]
-    
-;
 
-datat.sort((a,b)=> (a.date+a.time+a.content > b.date+b.time+b.content ? 1 : -1));
-console.log(datat)
 function CardStyle(background_color,border_color, icon){
  this.background_color=background_color;
  this.border_color=border_color;
@@ -149,7 +690,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 
 const gap =30;
 const size_type="px";
-const interval=5;
+
 let begin="";
 let end ="";
 let num_day_in = 0;
@@ -164,11 +705,7 @@ return mydate;
 }
 
 
-Date.prototype.addDays = function(days) {
-    var dat = new Date(this.valueOf())
-    dat.setDate(dat.getDate() + days);
-    return dat;
-  }
+
 
 
   function get_end_of_month(date){
@@ -198,8 +735,7 @@ Date.prototype.addDays = function(days) {
 
   }
 
-
-
+  
   function get_y_data(jsonInput) {
     console.log(jsonInput);
 
@@ -222,8 +758,9 @@ Date.prototype.addDays = function(days) {
         if(startDay>lastDayOfMonth){
             startDay=lastDayOfMonth;
         }
+        
     }  
-
+    startDay-=5;
     if (endDay<interval)
     {
         endDay=1;   
@@ -256,6 +793,7 @@ Date.prototype.addDays = function(days) {
 
 
 
+
 function slice_month(date_array){
     let month_group= new Array();
     let pre_date=new Date();
@@ -277,9 +815,6 @@ function slice_month(date_array){
     console.log(month_group);
     return month_group;
 }
-
-
-
 
 
 
@@ -349,14 +884,36 @@ function createPanel(top_pos,layer_num, item_h) {
   for (i=0;i<layer_num;i++){
     layerPipe.push(this.createLayer(i)); 
   };
-  
-
 }
 
 
-function build_time_panel(){
+function build_time_panel(data,dateArray){
+  //adjust position
+
+  let container=
+  d3.select("div#base")
+  .append("div")
+  .attr("id", "contain")
+  .style("overflow","auto");
+  // // Container class to make it responsive.
+
+  
+  let divArray=["day_sec","type_sec","dot_sec","card_sec","line_sec","event_sec"];
+
+  divArray.forEach(function(value){
+    container
+    .append("div")
+    .attr("id", value)
+  });
+  d3.select("#contain")
+  .style('left',axisLeft+size_type)
+  // .style('height',containerHeight+'px')
+  .style('width',containerWidth+'px')
+
+
+
   let month_p=d3.select("#month").selectAll("div");
-  let month_array=slice_month(get_y_data(datat));
+  let month_array=slice_month(dateArray);
   let date_p=d3.select("#day_sec").selectAll("div");
   let type_p=d3.select("#type_sec").selectAll("div");
   let event_p=d3.select("#event_sec").selectAll("div");
@@ -367,6 +924,7 @@ function build_time_panel(){
   let date_p_l_border=2;
   let y_ruler_length=0;
   let month_width=0;
+  //console.log(month_array[i][0]);
   for (let i = 0 ; i< month_array.length; i++){
     console.log(month_array[i][0]);
     let a =[];
@@ -379,7 +937,7 @@ function build_time_panel(){
       .enter()
       .append("div")
       .merge(date_p)
-      .style('width',gap+size_type).style('height','20px').style('display', 'inline-block').style('padding',date_p_padding+size_type)
+      .style('width',dayWidth+size_type).style('height','20px').style('display', 'inline-block').style('padding',date_p_padding+size_type)
       .style('background-color',p_background_color)
       .style('color',p_word_color)
       .style('border-bottom',date_p_l_border+size_type+border_color)
@@ -463,48 +1021,49 @@ function build_time_panel(){
   let card_model_array=[];
 
   let card_model_array_index=0;
-  for(let i = 0; i<datat.length;i++){
+  for(let i = 0; i<data.length;i++){
       while (datat[i]["type"]==="class_bar_end" && i<datat.length-1){
         i=i+1;
       }
       let key = format_map.get(datat[i]["content"]);
-      let type = datat[i]["type"];
+      let type = data[i]["type"];
 
       if (key){
         let style = style_map.get(key);
 
-        card_model_array[card_model_array_index]= new CardModel(datat[i]["content"],"https://",style,type,0);
+        card_model_array[card_model_array_index]= new CardModel(data[i]["content"],"https://",style,type,0);
       }
       else {
-        card_model_array[card_model_array_index]= new CardModel(datat[i]["content"],"https://",default_style,type,0);
+        card_model_array[card_model_array_index]= new CardModel(data[i]["content"],"https://",default_style,type,0);
       }
       let period_value=end_t.valueOf()-start_t.valueOf();
-      let t = moment(datat[i]['date']+" "+datat[i]['time'], "YYYYMMDD HH:mm:ss", true);
+      let t = moment(data[i]['date']+" "+data[i]['time'], "YYYYMMDD HH:mm:ss", true);
       let p = (t.valueOf()-start_t.valueOf())/period_value*y_ruler_length+date_p_padding+gap/2;
       card_model_array[card_model_array_index].center_pos=Math.round(p, 2);
     
-      if (datat[i]["bar_id"]>0){
-        card_model_array[card_model_array_index].bar_id=datat[i]["bar_id"];
+      if (data[i]["bar_id"]>0){
+        card_model_array[card_model_array_index].bar_id=data[i]["bar_id"];
       }
       card_model_array_index=card_model_array_index+1;
   }
 
   let card_border_width=2;
   let card_padding_width=5;
+  let card_max_width=200;
   function no_dots(type){
     return type==="class_bar_start"||type==="class_bar_end";
   }
 
   let event_pos_array=[];
-  for (let i = 0 ; i<datat.length ;i++){
+  for (let i = 0 ; i<data.length ;i++){
     let period_value=end_t.valueOf()-start_t.valueOf();
-    let t = moment(datat[i]['date']+" "+datat[i]['time'], "YYYYMMDD HH:mm:ss", true);
+    let t = moment(data[i]['date']+" "+data[i]['time'], "YYYYMMDD HH:mm:ss", true);
     // console.log(t.valueOf()-start_t.valueOf());
     // console.log(period_value);
     // console.log((t.valueOf()-start_t.valueOf())/period_value*y_ruler_length);
     event_pos_array[i]=new eventPos();
-    event_pos_array[i].type=datat[i]["type"];
-    event_pos_array[i].bar_id=datat[i]["bar_id"];
+    event_pos_array[i].type=data[i]["type"];
+    event_pos_array[i].bar_id=data[i]["bar_id"];
     let p = (t.valueOf()-start_t.valueOf())/period_value*y_ruler_length+date_p_padding+gap/2;
 
     event_pos_array[i].center_pos=Math.round(p, 2);
@@ -559,7 +1118,11 @@ function build_time_panel(){
   .style('padding',card_padding_width+size_type)
   .each(function(d,i) {
       d3.select(this)
-      .attr('class', d.style.icon).attr('font-weight', 900).text(d=>d.text)
+      .attr('class', d.style.icon).attr('font-weight', 900).text(d=>d.text);
+      if (d.type!="class_bar_start") {
+        d3.select(this)
+        .style('max-width',card_max_width+size_type);
+      }
   });
  
  
@@ -582,7 +1145,7 @@ function build_time_panel(){
 
     if (card_model_array[i].type==="class_bar_start") {
       card_model_array[i].left_pos=card_model_array[i].center_pos;
-      for(let j = i;j < datat.length; j++){
+      for(let j = i;j < data.length; j++){
         if(event_pos_array[j].type==="class_bar_end"&&card_model_array[i].bar_id===event_pos_array[j].bar_id){
           card_model_array[i].right_pos=event_pos_array[j].center_pos;
           console.log(card_model_array[i].right_pos);
@@ -662,7 +1225,6 @@ function build_time_panel(){
 
 };
 
-build_time_panel();
 
 
 
@@ -684,4 +1246,24 @@ function buildMonthPanel(input){
   }
 
 
+  if (test===1){
+
+    let thresholds =  csvToArray(csvTest).sort(function(a, b){
+    v1= a.variable.toLowerCase();
+    v2 = b.variable.toLowerCase();
+    if (v1 < v2) return -1;
+    if (v1 > v2) return 1;
+    return 0;});
   
+    console.log(thresholds)
+    let data=datat.data.data;
+    let columns =datat.data.columns;
+    data.sort((a,b)=> (a[0]+a[1]+a[2] > b[0]+b[1]+b[2] ? 1 : -1));
+    
+    resizeFromframe(data);
+    let dateArray =setXAxisSize(data)
+    console.log(dateArray);
+    lineChart(data,dateArray,columns,thresholds);
+    
+    build_time_panel(data,dateArray);
+  }

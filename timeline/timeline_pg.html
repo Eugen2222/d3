@@ -10,6 +10,88 @@
 
 </head>
 <style> 
+
+<style>
+     .axis path{
+         stroke:black;
+         stroke-width:1px ;
+
+     }   
+
+     .axis line{
+         stroke: black;
+         stroke-width: 1px;
+     } 
+  
+     .axis text{
+
+         /* font-weight: bold; */
+         font-size: 12px;
+         font-family:"Arial Black" sans-serif;
+     } 
+
+     .legend text{
+
+         font-family:"Arial", sans-serif;
+         font-size: 12px;
+     }
+
+
+
+.tooltip{
+  font-size: 12px;
+  width: 120px;
+  color: black;
+  text-align: left;
+  /* border-radius: 6px; */
+  padding: 0px 0;
+  font-family:"Arial", sans-serif;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+
+.svg-container {
+
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width:100%;
+ /* aspect ratio */
+  vertical-align: top;
+
+}
+.svg-content-responsive {
+
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+    width: 100%;
+  top: 10px;
+  left: 0;
+}
+
+#chartId {
+
+  height: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     #month {
     display:inline-block;
     }
@@ -166,17 +248,13 @@ vertical-align: bottom;
 
 </style>
 <body>
-    <div id="contain" style="overflow:auto;  height:550px;">
-        <div id="month"></div>
-        <div id="day_sec"></div>
 
-        <div id="type_sec"></div>
-        <div id="dot_sec"></div>
-        <div id="card_sec"></div>
-        <div id="line_sec"></div>
-        <div id="event_sec"></div>
+    <div id="base">
+        <div id="chartId">
+
+        </div>
+ 
     </div>
-
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
