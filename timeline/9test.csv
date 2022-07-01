@@ -1,0 +1,22 @@
+﻿病歷號,院區,護理站,床號,住院號,入住ICU日期,紀錄日期,紀錄時間,BT,HR,RESP,NBPs,NBPd,ABPs,ABPd,NBPm,ABPm,分隔,執行內容,簡碼,說明,date,time,icon
+9,3,L10B,L10B1025,223037705,06May2022,28Apr2022,18:00,,,,,,,,,,8,CBC,LAB,AbsNeutro.#:    4400    Basophil:       0       Eosinophil:       4     Hematocrit:      31     Hemoglobin:      11     HgB:      11            Lymphocyte:       7,44679,0.75,18
+9,3,L10B,L10B1025,223037705,06May2022,28Apr2022,18:00,,,,,,,,,,8,ELECTROLYTE,LAB,K(Potassium):       3   Na(Sodium):     135,44679,0.75,19
+9,3,L10B,L10B1025,223037705,06May2022,28Apr2022,18:00,,,,,,,,,,8,GAS,LAB,AaDO2:       .          FIO2:       .           SAT(Vein):      87      Temperature:      37    pCO2(Vein):      33     pH(Vein):       7       pO2(Vein):      48,44679,0.75,20
+9,3,L10B,L10B1025,223037705,06May2022,28Apr2022,18:00,,,,,,,,,,8,INFECTION,LAB,CRP:     101,44679,0.75,21
+9,3,L10B,L10B1025,223037705,06May2022,28Apr2022,18:00,,,,,,,,,,8,LIVER_RENAL,LAB,AST/GOT:      24        BUN:      26            Creatinine:       1,44679,0.75,22
+9,3,L10B,L10B1025,223037705,06May2022,03May2022,06:00,,,,,,,,,,8,CBC,LAB,AbsNeutro.#:    2264    Basophil:       1       Eosinophil:       3     Hematocrit:      25     Hemoglobin:       9     HgB:       9            Lymphocyte:      15,44684,0.25,3
+9,3,L10B,L10B1025,223037705,06May2022,03May2022,06:00,,,,,,,,,,8,COAGULATION,LAB,APTT:      29           APTTdata/mean:       1  INR:       1            Nor.plasmamean:      11 Nor.plasmamean:      28 P.T:      14,44684,0.25,4
+9,3,L10B,L10B1025,223037705,06May2022,03May2022,06:00,,,,,,,,,,8,ELECTROLYTE,LAB,K(Potassium):       3   Na(Sodium):     141,44684,0.25,5
+9,3,L10B,L10B1025,223037705,06May2022,03May2022,06:00,,,,,,,,,,8,INFECTION,LAB,CRP:      69,44684,0.25,6
+9,3,L10B,L10B1025,223037705,06May2022,03May2022,06:00,,,,,,,,,,8,LIVER_RENAL,LAB,ALT/GPT:      15        BUN:      14            Creatinine:       1     TotalBilirubin:       1,44684,0.25,7
+9,3,L10B,L10B1025,223037705,06May2022,03May2022,23:00,,,,,,,,,,8,CBC,LAB,Basophil:       1       Eosinophil:       2     Lymphocyte:      10     Monocyte:       8       NucleatedRBC:       1   Segment:      80        WBC:       3,44684,0.958333333,9
+9,3,L10B,L10B1025,223037705,06May2022,03May2022,23:00,,,,,,,,,,8,INFECTION,LAB,Lactate(B):      13     Procalcitonin:       0,44684,0.958333333,10
+9,3,L10B,L10B1025,223037705,06May2022,05May2022,08:00,,,,,,,,,,1,CHEST P-A VIEW,X-ray,,44686,0.333333333,16
+9,3,L10B,L10B1025,223037705,06May2022,05May2022,18:00,,,,,,,,,,8,GAS,LAB,AaDO2:       .          FIO2:       .           SAT:      95            Temperature:      37    pCO2:      37           pH:       7             pO2:      68,44686,0.75,21
+9,3,L10B,L10B1025,223037705,06May2022,05May2022,23:00,,,,,,,,,,8,CBC,LAB,AbsNeutro.#:    4235    Band:       1           Basophil:       0       Eosinophil:       0     Hematocrit:      30     Hemoglobin:      10     HgB:      10,44686,0.958333333,17
+9,3,L10B,L10B1025,223037705,06May2022,05May2022,23:00,,,,,,,,,,8,ELECTROLYTE,LAB,Ca(Calcium):       9    InorganicP:       2     K(Potassium):       4   Na(Sodium):     141,44686,0.958333333,18
+9,3,L10B,L10B1025,223037705,06May2022,05May2022,23:00,,,,,,,,,,8,INFECTION,LAB,CMV-IgG:       .        CMV-IgM:       .        CRP:      33,44686,0.958333333,19
+9,3,L10B,L10B1025,223037705,06May2022,05May2022,23:00,,,,,,,,,,8,LIVER_RENAL,LAB,ALT/GPT:      27        Albumin:       3        BUN:      28            Creatinine:       1     TotalBilirubin:       1,44686,0.958333333,20
+9,3,L10B,L10B1025,223037705,06May2022,06May2022,00:01,,,,136,83,,,100.6666667,,1,CHEST P-A VIEW,X-ray,,44687,0.000694444,20
+9,3,L10B,L10B1025,223037705,06May2022,06May2022,00:01,,,,136,83,,,100.6666667,,7,INTUBATION,Endo,,44687,0.000694444,21
+9,3,L10B,L10B1025,223037705,06May2022,06May2022,00:01,,,,136,83,,,100.6666667,,8,GAS,LAB,AaDO2:       .          FIO2:       .           SAT:      97            Temperature:      37    pCO2:      42           pH:       7             pO2:      90,44687,0.000694444,22

@@ -1,59 +1,4 @@
 
-var datat= 
-{
-  "data":{
-    "columns":
-      [{"label":"日期"},	{"label":"時間"},{"label":"階層"},{"label":"內容"},{"label":"簡碼"},{"label":"說明"}
-      , {"label":"HR"},{"label":"NBPd"},{"label":"NBPm"},{"label":"RESP"},{"label":"ABPm"},{"label":"ABPs"},{"label":"ABPd"},{"label":"NBPs"}]
-      ,
-    "data":[
-      ["05May2022","05:47","8","CBC","LAB","AbsNeutro.#:   15370    Basophil:       1       Eosinophil:       1     Hematocrit:      38     Hemoglobin:      13     HgB:      13            Lymphocyte:      14","142","","","46","","","",""],
-      ["05May2022","05:47","8","ELECTROLYTE","LAB","Ca(Calcium):       8    Cl(Chloride):     105   K(Potassium):       5   Na(Sodium):     136","142","","","46","","","",""],
-      ["05May2022","05:47","8","INFECTION","LAB","CRP:       1","142","","","46","","","",""],
-      ["05May2022","05:47","8","LIVER_RENAL","LAB","ALT/GPT:       6        AST/GOT:      28        BUN:      16            Creatinine:       1     D.Bilirubin:       1    Dbil/Tbilratio:      19 TotalBilirubin:       4","142","","","46","","","",""],
-      ["05May2022","05:47","8","METABOLISM","LAB","Sugar:     129","142","","","46","","","",""],
-      ["05May2022","08:30","8","CBC","LAB","AbsNeutro.#:   15370    Basophil:       1       Eosinophil:       1     Hematocrit:      38     Hemoglobin:      13     HgB:      13            Lymphocyte:      14","136","","","42","","","",""],
-      ["05May2022","08:30","8","ELECTROLYTE","LAB","Ca(Calcium):       8    Cl(Chloride):     105   K(Potassium):       5   Na(Sodium):     136","136","","","42","","","",""],
-      ["05May2022","08:30","8","INFECTION","LAB","CRP:       1","136","","","42","","","",""],
-      ["05May2022","08:30","8","LIVER_RENAL","LAB","ALT/GPT:       6        AST/GOT:      28        BUN:      16            Creatinine:       1     D.Bilirubin:       1    Dbil/Tbilratio:      19 TotalBilirubin:       4","136","","","42","","","",""],
-      ["05May2022","08:30","8","METABOLISM","LAB","Sugar:     129","136","","","42","","","",""],
-      ["05May2022","13:00","8","CBC","LAB","AbsNeutro.#:   15370    Basophil:       1       Eosinophil:       1     Hematocrit:      38     Hemoglobin:      13     HgB:      13            Lymphocyte:      14","","","","","","","",""],
-      ["05May2022","13:00","8","ELECTROLYTE","LAB","Ca(Calcium):       8    Cl(Chloride):     105   K(Potassium):       5   Na(Sodium):     136","","","","","","","",""],
-      ["05May2022","13:00","8","INFECTION","LAB","CRP:       1","","","","","","","",""],
-      ["05May2022","13:00","8","LIVER_RENAL","LAB","ALT/GPT:       6        AST/GOT:      28        BUN:      16            Creatinine:       1     D.Bilirubin:       1    Dbil/Tbilratio:      19 TotalBilirubin:       4","","","","","","","",""],
-      ["05May2022","13:00","8","METABOLISM","LAB","Sugar:     129","","","","","","","",""],
-      ["05May2022","16:10","8","CBC","LAB","AbsNeutro.#:   15370    Basophil:       1       Eosinophil:       1     Hematocrit:      38     Hemoglobin:      13     HgB:      13            Lymphocyte:      14","140","","","43","","","",""],
-      ["05May2022","16:10","8","ELECTROLYTE","LAB","Ca(Calcium):       8    Cl(Chloride):     105   K(Potassium):       5   Na(Sodium):     136","140","","","43","","","",""],
-      ["05May2022","16:10","8","INFECTION","LAB","CRP:       1","140","","","43","","","",""],
-      ["05May2022","16:10","8","LIVER_RENAL","LAB","ALT/GPT:       6        AST/GOT:      28        BUN:      16            Creatinine:       1     D.Bilirubin:       1    Dbil/Tbilratio:      19 TotalBilirubin:       4","140","","","43","","","",""],
-      ["05May2022","16:10","8","METABOLISM","LAB","Sugar:     129","140","","","43","","","",""],
-      ["05May2022","19:03","8","CBC","LAB","AbsNeutro.#:   15370    Basophil:       1       Eosinophil:       1     Hematocrit:      38     Hemoglobin:      13     HgB:      13            Lymphocyte:      14","123","","","","","","",""],
-      ["05May2022","19:03","8","ELECTROLYTE","LAB","Ca(Calcium):       8    Cl(Chloride):     105   K(Potassium):       5   Na(Sodium):     136","123","","","","","","",""],
-      ["05May2022","19:03","8","INFECTION","LAB","CRP:       1","123","","","","","","",""],
-      ["05May2022","19:03","8","LIVER_RENAL","LAB","ALT/GPT:       6        AST/GOT:      28        BUN:      16            Creatinine:       1     D.Bilirubin:       1    Dbil/Tbilratio:      19 TotalBilirubin:       4","123","","","","","","",""],
-      ["05May2022","19:03","8","METABOLISM","LAB","Sugar:     129","123","","","","","","",""],
-      ["06May2022","00:35","4","LOWER G-I SERIES","graphy","","129","","","","","","",""],
-      ["06May2022","02:32","4","LOWER G-I SERIES","graphy","","121","","","","","","",""],
-      ["06May2022","08:02","4","LOWER G-I SERIES","graphy","","","43","54","","","","","76"],
-      ["06May2022","08:15","4","LOWER G-I SERIES","graphy","","129","","","","","","",""],
-      ["06May2022","16:08","4","LOWER G-I SERIES","graphy","","112","","","","","","",""],
-      ["06May2022","21:31","4","LOWER G-I SERIES","graphy","","","","","","","","",""],
-      ["07May2022","00:20","","","","","122","","","","","","",""],
-      ["07May2022","05:30","","","","","139","","","","","","",""],
-      ["07May2022","08:24","","","","","","50","60","","","","","80"],
-      ["07May2022","09:01","","","","","143","","","","","","",""],
-      ["07May2022","13:00","","","","","110","","","","","","",""],
-      ["07May2022","16:11","","","","","119","","","","","","",""],
-      ["08May2022","00:15","1","CHEST P-A VIEW","X-ray","","114","","","","","","",""],
-      ["08May2022","00:15","8","LIVER_RENAL","LAB","TotalBili(MIC):       8","114","","","","","","",""],
-      ["08May2022","08:05","1","CHEST P-A VIEW","X-ray","","143","55","60","","","","","70"],
-      ["08May2022","08:05","8","LIVER_RENAL","LAB","TotalBili(MIC):       8","143","55","60","","","","","70"]
-      
-    ]
-  }
-}
-
-;
 let csvTest=
 "variable,lower_bound,upper_bound,range_0,range_1\n"+
 "HR,50,120,30,220\n"+
@@ -65,12 +10,12 @@ let csvTest=
 "ABPD,60,80,10,130\n"+
 "ABPm,65,110,10,180\n"+
 "BT,35,38,31,42\n";
-let iconTest='key,location,\nangiography,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/angiography.png,\nBacteria,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Bacteria.png,\nBLOOD TRANSFUSION,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/BLOOD TRANSFUSION.png,\nBLOOD SMEAR INTERPRETATION /BONE MARROW_M,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/BLOOD_SMEAR_INTERPRETATION_BONE MARROW_M.png,\nCHEST-M,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/CHEST-M.png,\nCPR,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/CPR.png,\nC/T,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/CT.png,\nDrainage,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Drainage.png,\nDrug,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Drug.png,\nECHO/ERCP/graphy,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/ECHO_ERCP_graphy.png,\nEEG,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/EEG.png,\nEndo,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Endo.png,\nFeeding,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Feeding.png,\nH/D,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/HD.png,\nISOLATION,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/ISOLATION.png,\nLab,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Lab.png,\nLOW PRESSURE SUCTION,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/LOW_PRESSURE_SUCTION.png,\nMRI,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/MRI.png,\nPICC,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/PICC.png,\nPuncture,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Puncture.png,\nScopy,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Scopy.png,\nT.A.E,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/TAE.png,\nTEE,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/TEE.png,\nX-ray,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/X-ray.png'
+let iconTest='key,location,\nangiography,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/angiography.png,\nBacteria,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Bacteria.png,\nBLOOD TRANSFUSION,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/BLOOD_TRANSFUSION.png,\nBLOOD SMEAR INTERPRETATION /BONE MARROW_M,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/BLOOD_SMEAR_INTERPRETATION_BONE MARROW_M.png,\nCHEST-M,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/CHEST-M.png,\nCPR,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/CPR.png,\nC/T,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/CT.png,\nDrainage,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Drainage.png,\nDrug,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Drug.png,\nECHO/ERCP/graphy,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/ECHO_ERCP_graphy.png,\nEEG,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/EEG.png,\nEndo,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Endo.png,\nFeeding,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Feeding.png,\nH/D,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/HD.png,\nISOLATION,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/ISOLATION.png,\nLab,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Lab.png,\nLOW PRESSURE SUCTION,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/LOW_PRESSURE_SUCTION.png,\nMRI,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/MRI.png,\nPICC,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/PICC.png,\nPuncture,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Puncture.png,\nScopy,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/Scopy.png,\nT.A.E,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/TAE.png,\nTEE,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/TEE.png,\nX-ray,file:///C:/Users/user01/Desktop/d3/d3/timeline/pics/X-ray.png'
 
 let test=1;
 let VA_RESULT_NAME;
 let thresholdsUrl = "file:///E:/git_hub/d3/timeline/lineChartBound.csv";
-thresholdsUrl='https://10.70.12.114/test/linechart/lineChartBound.csv';
+thresholdsUrl='https://10.70.12.114/test/timeline/lineChartBound.csv';
 url = "file:///E:/git_hub/d3/timeline/lineChartBound.csv";
 let iconMapUrl='https://10.70.12.114/test/timeline/iconPaths.csv';
 let iconCsv="file:///E:/git_hub/d3/timeline/iconPaths.csv";
@@ -90,7 +35,32 @@ Date.prototype.addDays = function(days) {
 var viewportwidth;
 var viewportheight;
 
+let  variableQueue = [];
 
+
+
+variableQueue.push("id")
+variableQueue.push("dateIndex")
+variableQueue.push("timeIndex")
+variableQueue.push("hierarchyIndex")
+variableQueue.push("iconIdIndex")
+variableQueue.push("typeIndex")
+variableQueue.push("lineHoverIndex")
+variableQueue.push("timeHoverIndex")
+let id=variableQueue.indexOf("id");
+
+let typeIndex=variableQueue.indexOf("typeIndex");
+let iconIdIndex=variableQueue.indexOf("iconIdIndex");
+// let contentIndex=6;
+let dateIndex=variableQueue.indexOf("dateIndex");
+let timeIndex=variableQueue.indexOf("timeIndex");
+let hierarchyIndex=variableQueue.indexOf("hierarchyIndex");
+let iconCodeIndex=variableQueue.indexOf("iconCodeIndex");
+let lineHoverIndex=variableQueue.indexOf("lineHoverIndex");
+let timeHoverIndex=variableQueue.indexOf("timeHoverIndex");
+
+
+let startColIndex=variableQueue.length;
 let leftMargin=5;
 let rightMargin=5;
 let topMargin=30;
@@ -99,29 +69,46 @@ let axisLeft=0;
 let legendWidth=60;
 let tickPadding=30;
 
-let dateI=0;
+
 let interval=5;
 let dayWidth=50;
 let xAxisWidth=1000;
 let containerWidth;
-let startColIndex=7-1;
+
 let lineChartHeight=0;
 let timeChartHeight=0;
-let timeFormat ="DDMMMYYYYH:m"
+let lineTimeChartRatio=0.6;
+let lineChartCircleRadius=4;
+let lineChartLineWidth=3;
+let lineChartHoverOpacity=0.9;
+let timeFormat ="YYYY-MM-DDH:m"
+let dateFormat ="YYYY-MM-DD"
 let xPosArray=[]
 let start_t
 let end_t
 let period_value=0; 
-let typeIndex=3;
-  let contentIndex=5;
-  let dateIndex=0;
-  let timeIndex=1;
-  let hierarchyIndex=2;
-  let iconCodeIndex=4;
+
   let legendTop=10;
   let iconMap=new Map();
-let imagePath ='https://cdn.dribbble.com/users/22018/screenshots/2456036/d3_1x.png';
+  let iconPadding=2;
+let clickZIndex = 5;
+let defaultZIndex=1;
+let clickedEleIndex=-1;
+
+
+console.log(dateIndex)
+
+// let imagePath ='https://cdn.dribbble.com/users/22018/screenshots/2456036/d3_1x.png';
 function formatDate(){}
+function sendSelectedRowToVA(rowId){
+  const selections = [];
+          selections.push({ row: rowId });
+          console.log(selections);
+          console.log(VA_RESULT_NAME);
+          va.messagingUtil.postSelectionMessage(VA_RESULT_NAME, selections);
+
+
+}
 function originGetBeginEndDay(){
 
   if (startDay<interval)
@@ -157,12 +144,12 @@ function getMinMax(arr) {
   if (!arr) {
     return null;
   }
-  var minV = moment(arr[0], "DDMMMYYYY", true);
-  var maxV = moment(arr[0], "DDMMMYYYY", true);
+  var minV = moment(arr[0], dateFormat, true);
+  var maxV = moment(arr[0], dateFormat, true);
   var min="";
   var max="";
   for (a of arr) {
-    var cur =moment(a, "DDMMMYYYY", true)
+    var cur =moment(a, dateFormat, true)
     if  (cur< minV){
       minV = cur;
       // min=a;
@@ -195,7 +182,7 @@ function setXAxisSize(data) {
 
 
   let dateArray = new Array();
-  var dateData=data.map(function(d) { return d[dateI] });
+  var dateData=data.map(function(d) { return d[dateIndex] });
   // console.log(dateData);
   let minMax=getMinMax(dateData);
   console.log(minMax)
@@ -204,20 +191,20 @@ function setXAxisSize(data) {
   let startDate= moment(minMax[0].toDate()) ;
   let endDate= moment(minMax[1].toDate()) ;
   
- 
+ console.log(minMax)
 
   // startDate=moment(s[3]+s[1]+s[2]+" "+"00:00:00", "YYYYMMMDD HH:mm:ss", true);
   // endDate=get_date(end,endDay);
-
+  let numsOfDays=0
   while (startDate<= endDate) {
 
 
     dateArray.push(startDate)
 
     startDate = moment(startDate.clone().add(1, 'days').toDate());
-
+    ++numsOfDays;
   }
-  dateArray.push(startDate)
+  //  dateArray.push(startDate)
 
   startDate = moment(startDate.clone().add(1, 'days').toDate());
   // for(d in dateArray){
@@ -234,7 +221,12 @@ function setXAxisSize(data) {
   console.log(end_t)
   period_value=end_t.valueOf()-start_t.valueOf();
   console.log(period_value) 
-  dayWidth=viewportwidth/interval;
+  if (numsOfDays<interval){
+    dayWidth=viewportwidth/numsOfDays;
+  }
+  else{
+    dayWidth=viewportwidth/interval;
+  }
   xAxisWidth=dayWidth*dateArray.length;
   console.log("day:"+dayWidth)
   console.log(xAxisWidth)
@@ -280,12 +272,29 @@ function resizeFromframe(data){
           viewportheight = document.getElementsByTagName('body')[0].clientHeight
     }
 
-    lineChartHeight=viewportheight/3
-    timeChartHeight=viewportheight/3*2
+    lineChartHeight=viewportheight*(1-lineTimeChartRatio)
+    timeChartHeight=viewportheight*lineTimeChartRatio
     //-->
   }
 
-function lineChart(data,dateArray,columns,thresholds) {
+  function padLeft(str,length,char){
+    if(str.length >= length)
+        return str;
+    else
+        return padLeft(char +str,length);
+}
+function formatData(data,i){
+  result=data;
+  console.log(result);
+  for (j=0; j<result.length ;++j){
+
+    result[j][i]= padLeft(result[j][i],5, "0");
+    // console.log(result[j][i]);
+  }
+
+  return result;
+}
+function lineChart(data,dateArray,columns,thresholds,contentIndex) {
   //remove old
   let containerHeight= lineChartHeight;
   console.log(data);  
@@ -308,11 +317,11 @@ function lineChart(data,dateArray,columns,thresholds) {
   
   let nums_variables=numCols-startColIndex-1;
   let indexArray=[];
-  let variablesWidth=nums_variables*tickPadding;
+  let variablesWidth=nums_variables*(tickPadding+5);
 
   axisBaseHeight=containerHeight-5;
   axisLeft=leftMargin+variablesWidth+5;
-  containerWidth=xAxisWidth+axisLeft;
+  containerWidth=xAxisWidth+axisLeft+legendWidth;
  
 
 
@@ -383,20 +392,35 @@ let svgContainer =d3.select("div#chartId")
     .classed("svg-left", true)
     .attr("height",axisBaseHeight+10+"px")
     .attr("width", axisLeft+"px")
+ 
     
+    svgContainer.append("svg")
+    .classed("svg-right", true)
+    .attr("height",axisBaseHeight+10+"px")
+    .attr("width", axisLeft+"px")
+
     // build y axis
     for(let i =0;i<nums_variables;i++){
       indexArray.push(i);
     }
-
-    let color = d3.scaleLinear().domain([0,(data[0].length/2-1), data[0].length - 1]).range(["#4A4AFF","#1AFD9C", "#FFA042"])
+    let domain=[]
+    for(let i = startColIndex ; i<data[0].length; ++i){
+      domain.push(i)
+    }
+    // let color = d3.scaleLinear().domain([0,(startColIndex), data[0].length - 1]).range(["#2A1594","#EE6002","#A349A4", "#26A69A"])
+    let color = d3.scaleOrdinal().domain(domain).range(["#2A1594","#EE6002","#A349A4", "#26A69A","#F0CC00"])
+   
     console.log(data[0].length);
 
 
 
     dataColumns = columns.slice(startColIndex)
     //right legend
-    
+
+    let mouseOverDiv = d3.select("#chartId").append("div")
+
+    .attr("class", "tooltip")
+    .style("opacity", 0);
 
 
 
@@ -413,7 +437,7 @@ let svgContainer =d3.select("div#chartId")
         
         console.log("find column:"+columnName);
         // console.log("find threshold:"+threshold.upper_bound);       
-        drawLineAndPoint(columnName,data,color,i,xScale,threshold);
+        drawLineAndPoint(columnName,data,color,i,xScale,threshold,mouseOverDiv,contentIndex);
         var boxWidth=10;
 
 
@@ -455,6 +479,7 @@ let svgContainer =d3.select("div#chartId")
    function csvToArray(str, delimiter = ",") {
     // slice from start of text to the first \n index
     // use split to create an array from string by delimiter
+    console.log(str)
     const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
   
     // slice from \n index + 1 to the end of the text
@@ -481,7 +506,7 @@ let svgContainer =d3.select("div#chartId")
   }
 
 
-function drawLineAndPoint(columnName,data,color,i,xScale,threshold){
+function drawLineAndPoint(columnName,data,color,i,xScale,threshold,mouseOverDiv,contentIndex){
 //   var sumstat = d3.nest() 
 //   .key(d => d.media)
 //   .entries(data);
@@ -505,16 +530,14 @@ function drawLineAndPoint(columnName,data,color,i,xScale,threshold){
 //        .attr('value','Text goes here').attr("transform", "translate("+startLeft+",0)") ;
 
 
-var div = d3.select("#chartId").append("div")
-    .attr("class", "tooltip")
-    .style("opacity", 0);
+
 
 
 
 
 
 var yMax=(Math.floor(d3.max(data,d=>{
-  return d[i]
+  return isNaN(d[i]) ? -1: d[i]
 })/10)+1)*10;
 console.log(yMax);
 console.log(threshold);
@@ -541,10 +564,12 @@ if (!isNaN(yMax)){
         tickValues.push(i*gap);
       }
     }
+
+    // tickPadding=axisLeft/(i-startColIndex-1)-40
 yAxis = d3.axisLeft()
 .scale(yScale)
 .tickValues(tickValues)
-.tickPadding(tickPadding*(i-startColIndex-1));
+.tickPadding(tickPadding*(i-startColIndex));
 
 d3.select('.svg-left')
 .append("g")
@@ -567,7 +592,7 @@ d3.select('#yaxis'+i)
 
 d3.select('#yaxis'+i)
 .append("text")
-.attr("x", tickPadding*(i-startColIndex-1))
+.attr("x", tickPadding*(i-startColIndex+2))
 .text(columnName);
 
 
@@ -598,21 +623,25 @@ svg
   .attr("d",lineDrawer(maps))
   .attr("fill", "none")
   .attr("stroke", d => color(i))
-  .attr("stroke-width", 2)
+  .attr("stroke-width", lineChartLineWidth)
   .attr("z-index", 1)
   .attr("class","line"+i);
 var line = svg.select(".line"+i);  
+
+
 svg.selectAll(".circle"+i)
 .data(data)
 .enter()
 .append("circle")
-.attr("r", function(d) { return isNaN(d[i])  ? 0 : 3; })
+.attr("class","c"+i)
+.attr("r", function(d) { return isNaN(d[i])  ? 0 : lineChartCircleRadius; })
 .attr("cx", d => {
   // console.log(d[i])
   if(isNaN(d[i])||d[i]===""){
-
+    // console.log(d[i])
     return -9999
   }else{
+      
     return lineXScaleS(d[dateIndex]+d[timeIndex])
   }
   })
@@ -630,44 +659,83 @@ svg.selectAll(".circle"+i)
     }
   }
   catch (e) {
+    
   }
-  return color(i);})
-  .on("mouseover", function(event,d) { 
-    console.log(event);
-    console.log(d);
-    let x =event.pageX;
-    let y =event.pageY;
-    div.transition()
-      .style("opacity", .9)
-      .style("left", (x) + "px")
-      .style("top", (y + 10) + "px");
+  return "white";})
+  .style("stroke", d => { try {
+    if (parseInt(d[i])>threshold.upper_bound){
+    console.log(d[i]+">"+threshold.upper_bound)
+    return "red";
+  }else if (parseInt(d[i])<threshold.lower_bound){
+    // return "yellow";
+    console.log(d[i]+"<"+threshold.lower_bound)
+    return "red";
+  }
+  return color(i); 
+}catch (e) {
+  return color(i);
+  }})
+
+  .each(function(d,rowid) {
+    // if (d.date()%interval===1) {
+
+      d3.select(this)
+      .on("mouseover", function(event) { 
+        console.log(event);
+        console.log(d[dateIndex]+d[timeIndex]);
+        svg.selectAll(".c"+i).attr("r", lineChartCircleRadius*1.5)
+    
+        let x =event.pageX;
+        let y =event.pageY;
+        // div.transition()
+        mouseOverDiv
+          .style("opacity", lineChartHoverOpacity)
+          .style("left", (x+10) + "px")
+          .style("top", (y -3) + "px")
+          .style("z-index", 5);
+    
+          try { // statements to try
+            let temContent=d[contentIndex]
+            if (temContent=="(遺漏值)"){
+              temContent=""
+            }
+            mouseOverDiv.html(columnName+":"+ d[i]+ "<br>"+ d[dateIndex]+" "+d[timeIndex]+ "<br>"+temContent+ "<br>up:"+threshold.upper_bound+ " <br>low:"+threshold.lower_bound)
+          }
+          catch (e) {
+            mouseOverDiv.html(columnName+":"+ d[i])        
+          }  
+        line.attr("stroke-width", lineChartLineWidth*1.5);
+        })
+      .on("mouseout", function(d) {
+        // div.transition()
+        svg.selectAll(".c"+i).attr("r", lineChartCircleRadius)
+        mouseOverDiv
+          .style("left", 0 + "px")
+          .style("top", 0 + "px")
+          .style("opacity", 0);
+        line.attr("stroke-width", lineChartLineWidth); 
+        })
+        .on("click", function(d){
+          sendSelectedRowToVA(rowid);
+
+        });
       
-    div.html(columnName+":"+ d[i]+ "<br>up:"+threshold.upper_bound+ " <br>low:"+threshold.lower_bound)
-
-
-    line.attr("stroke-width", 4);
-    })
-  .on("mouseout", function(d) {
-    div.transition()
- 
-      .style("left", 0 + "px")
-      .style("top", 0 + "px")
-      .style("opacity", 0);
-    line.attr("stroke-width", 3); 
-    });
+    // }
+  })
+  
 
 //append circle 
 
   // .selectAll("circle")
 
 
-  }
+  
 
 }
 
 
 
-
+}
 
 // if (window.addEventListener) {
 //   // For standards-compliant web browsers
@@ -742,17 +810,18 @@ let HO_style=new CardStyle("fddfe7","dac0cd","");
 let EmergencyMedicine_style=new CardStyle("f8d4f0","","");
 let MedicalCommon_style=new CardStyle("e6fede","","");
 let default_style=new CardStyle("fddfe7","dac0cd","");
+let second_style=new CardStyle("e5d4fe","C1C1FF","");
 let EC_style=new CardStyle("dfd6f5","","fas fa-eye-dropper");
 let HO_inhouse=new CardStyle("d5dcf6","c7cee0","");
 let map_list=
 [
   {"word":"E.cloacae","type":"EC"},
-  {"word":"???�?","type":"PHO"},
+  {"word":"???�??","type":"PHO"},
   {"word":"檢�??","type":"CHE"},
-  {"word":"�?液�?��?��??","type":"HO"},
+  {"word":"�??液�?��?��??","type":"HO"},
   {"word":"??�診??��??","type":"EmergencyMedicine"},
   {"word":"??��????��??","type":"MedicalCommon"}, 
-  {"word":"�?液�?��?��??�????","type":"HO_inhouse"}, 
+  {"word":"�??液�?��?��??�?????","type":"HO_inhouse"}, 
 ];
 
 
@@ -776,9 +845,10 @@ for (let i = 0 ; i < style_list.length ;i++){
 
 
 
-function CardModel(text,url, style,type,center_pos) {
+function CardModel(text,hover, style,type,center_pos) {
+this.rowid=-1;
  this.text=text;
- this.url=url;
+ this.hover=hover;
  this.style=style;
  this.type=type;
  this.center_pos=center_pos;
@@ -909,15 +979,19 @@ return mydate;
 
 function slice_month(date_array){
   let month_group= new Array();
+  console.log(date_array);
     if (date_array.length<1) return month_group;
 
     let pre_date=date_array[0];
     let head_index=0;
+    console.log(pre_date);
+    if (date_array.length===1){
+      month_group.push(date_array);
+      return month_group;
+    }
 
     for (let i=0 ; i<date_array.length; i++){
-        if (i===0){
-
-        }else{
+        
           console.log(pre_date)
             if(pre_date.year()!== date_array[i].year()||pre_date.month() !== date_array[i].month() ){
                 month_group.push(date_array.slice(head_index, i));    
@@ -926,7 +1000,7 @@ function slice_month(date_array){
             }else if (i===date_array.length-1){
                 month_group.push(date_array.slice(head_index));                 
             }
-        }
+        
         pre_date = date_array[i];
     }
     console.log(month_group);
@@ -969,7 +1043,7 @@ function createPanel(top_pos,layer_num, item_h) {
   let obj = {};
   let layerPipe=[];
   let nums=0;
-  let h = 1000;
+  let h = 100;
   let gap= (h-(item_h*layer_num))/layer_num;
   let curH=0;
   let curL=0;
@@ -977,7 +1051,7 @@ function createPanel(top_pos,layer_num, item_h) {
   let maxH=0;
   this.createLayer=function(n) {
     let obj = {};
-    obj.height = top_pos+n*(10+item_h);
+    obj.height = top_pos+n*(20+item_h);
     obj.left=invisible_pos;
     obj.right=invisible_pos;
     return obj;
@@ -1014,7 +1088,7 @@ function createPanel(top_pos,layer_num, item_h) {
 }
 
 
-function build_time_panel(data,dateArray){
+function build_time_panel(data,dateArray,contentIndex){
   //adjust position
   d3.select("#contain").remove();
 
@@ -1025,6 +1099,10 @@ function build_time_panel(data,dateArray){
   .style("overflow","auto");
   // // Container class to make it responsive.
 
+  let mouseOverDiv = container.append("div")
+
+  .attr("class", "tooltip")
+  .style("opacity", 0);
   
   let divArray=["month","day_sec","type_sec","dot_sec","card_sec","line_sec","event_sec"];
 
@@ -1168,17 +1246,19 @@ function build_time_panel(data,dateArray){
       // console.log(data[i])
       let type = data[i][typeIndex];
      
-      if(type.length>0){
+      if(type.length>0&&type!=="(遺漏值)"){
+
         let hierarchy= parseInt(data[i][hierarchyIndex]);
         let cardStyle=default_style;
-        console.log(hierarchy);
+
         if(!isNaN(hierarchy)& hierarchy<6){
-          cardStyle=MedicalCommon_style;
+          cardStyle=second_style;
 
         }
-        let card= new CardModel(data[i][typeIndex]+": "+data[i][contentIndex],"https://",cardStyle,type,0);
+        let card= new CardModel(data[i][typeIndex],data[i][contentIndex],cardStyle,type,0);
+        card.rowid=i;
         card.hierarchy=data[i][hierarchyIndex];
-        card.iconkey=data[i][iconCodeIndex];
+        card.iconkey=data[i][iconIdIndex];
         card_model_array[card_model_array_index]=card;
         // let period_value=end_t.valueOf()-start_t.valueOf();
       let t = moment(data[i][dateIndex]+data[i][timeIndex], timeFormat, true);
@@ -1238,20 +1318,26 @@ function build_time_panel(data,dateArray){
     console.log(!no_dots(d.type));
     if (!no_dots(d.type)) {
       d3.select(this)
+      .attr("id", "dot"+i)
       .style('left',d=>{return d.center_pos-dot_r+size_type;})
-      .style('width',dot_r*2+size_type).style('height',dot_r*2+size_type).style('top',day_bottom_h-dot_r+1+size_type);
+      .style('width',dot_r*2+size_type)
+      .style('height',dot_r*2+size_type)
+      .style('top',day_bottom_h-dot_r+1+size_type);
     }
   });
-  d3.select("#dot_sec").selectAll("div")
-  .data(card_model_array)
-  .enter()
-  .append("div")
-  .each(function(d,i) {
-    if (!no_dots(d.type)) {
-      d3.select(this)
-      .style('left',d=>{return d.center_pos-dot_r+size_type;}).style('width',dot_r*2+size_type).style('height',dot_r*2+size_type).style('top',day_bottom_h-dot_r+1+size_type);
-    }
-  });
+  // d3.select("#dot_sec").selectAll("div")
+  // .data(card_model_array)
+  // .enter()
+  // .append("div")
+  // .each(function(d,i) {
+  //   if (!no_dots(d.type)) {
+  //     d3.select(this)
+  //     .style('left',d=>{return d.center_pos-dot_r+size_type;})
+  //     .style('width',dot_r*2+size_type)
+  //     .style('height',dot_r*2+size_type)
+  //     .style('top',day_bottom_h-dot_r+1+size_type);
+  //   }
+  // });
 
 
   //fill text to card
@@ -1259,22 +1345,35 @@ function build_time_panel(data,dateArray){
 
  
   console.log(card_model_array);
-  let enterSelection=d3.select("#card_sec").selectAll("div")
+  let enterSelection=
+  d3.select("#card_sec")
+  .selectAll("div")
   .data(card_model_array)
   .enter()
   .append("div")
+
   .style('background-color',d=>"#"+d.style.background_color)
   .style('border',d=>card_border_width+size_type+" #"+d.style.border_color+" solid")
   .style('padding',card_padding_width+size_type)
   .style('display','flex')
   .each(function(d,i) {
       d3.select(this)
+      .attr("id", "card"+i)
       .attr('class', d.style.icon)
       .attr('font-weight', 900)
       .append('img')
-      .attr('src', iconMap.get(d.iconkey.toUpperCase( )))
-      .attr('width','16px')
-      .attr('height','16px');
+      
+      .attr('src', d=>{
+          try{
+            return iconMap[parseInt(d.iconkey)-1].location;
+          }catch(e){
+            return "";
+          }
+        }
+      )
+      // .attr('width','16px')
+      // .attr('height','16px')
+      .style('padding-right',iconPadding+size_type);
       // console.log(iconMap)
       d3.select(this)
       .append('text').text(d=>d.text);
@@ -1283,15 +1382,84 @@ function build_time_panel(data,dateArray){
       //   .style('max-width',card_max_width+size_type);
       // }
       // console.log(d)
+      let row=d;
+      d3.select(this)
+    .on("mouseover",  function(event) { 
+      console.log(event);
+      console.log(row);
+
+  
+      let x =event.pageX-axisLeft;
+      let y =event.pageY-axisBaseHeight;
+      // div.transition()
+      mouseOverDiv
+        .style("opacity", .8)
+        .style("left", (x) + "px")
+        .style("top", (y) + "px")
+        .style("z-index", 10);
+        try { // statements to try
+  
+          mouseOverDiv.html(row.hover)
+        }
+        catch (e) {
+          mouseOverDiv.html("")      
+        }  
+      // line.attr("stroke-width", 4);
+      })
+    .on("mouseout", function(d) {
+      // div.transition()
+      // svg.selectAll(".c"+i).attr("r", 2.5)
+      mouseOverDiv
+        .style("left", 0 + "px")
+        .style("top", 0 + "px")
+        .style("opacity", 0);
+      // line.attr("stroke-width", 2); 
+      })
+
+    // timeline click 
+    .on('click', function () {
+              
+        try{
+
+        
+
+          sendSelectedRowToVA(d.rowid);
+          console.log("pre "+ clickedEleIndex)
+          if (clickedEleIndex>=0){
+            d3.select("#dot"+clickedEleIndex)
+            .style("z-index", defaultZIndex);
+            d3.select("#line"+clickedEleIndex)
+            .style("z-index", defaultZIndex);
+            d3.select("#card"+clickedEleIndex)
+            .style("z-index", defaultZIndex);
+          }
+          clickedEleIndex=i;
+          console.log("click "+ clickedEleIndex)
+
+          d3.select("#dot"+clickedEleIndex)
+          .style("z-index", clickZIndex);
+          d3.select("#line"+clickedEleIndex)
+          .style("z-index", clickZIndex);
+          d3.select("#card"+clickedEleIndex)
+          .style("z-index", clickZIndex);
+        }
+        catch(e){
+
+        }
+        
+
+
+    });
   })
+;
  
 
 
 
   let event_sec_h = document.getElementById('event_sec').offsetTop;
   let type_sec_h = document.getElementById('type_sec').offsetTop;
-  let type_p_abtract = new  createPanel(type_sec_h+10,100,100);
-  let event_p_abtract = new  createPanel(event_sec_h+10,100,100);
+  let type_p_abtract = new  createPanel(type_sec_h+10,1000,50);
+  let event_p_abtract = new  createPanel(event_sec_h+10,1000,50);
 
   let children = document.getElementById('card_sec').children;
 
@@ -1325,6 +1493,7 @@ function build_time_panel(data,dateArray){
       let hierarchy =parseInt(card_model_array[i].hierarchy);
 
       card_h_array.push(type_p_abtract.addCard(card_model_array[i].left_pos, card_model_array[i].right_pos).height);
+      // console.log(card_h_array);
     // if(!isNaN(hierarchy)){
     //   if (hierarchy>5 || card_model_array[i].type==="class_bar_start" || card_model_array[i].type==="class_bar_end") {
     //     card_h_array.push(type_p_abtract.addCard(card_model_array[i].left_pos, card_model_array[i].right_pos).height);  
@@ -1352,7 +1521,7 @@ function build_time_panel(data,dateArray){
   //     .style('width',d.right_pos-d.left_pos-card_border_width-card_padding_width+size_type);
   //   }
   // });
-  console.log(card_h_array);
+  // console.log(card_h_array);
   d3.select("#card_sec").selectAll("div")
   .data(card_h_array).style('top',d=>d+size_type);
 
@@ -1368,9 +1537,11 @@ function build_time_panel(data,dateArray){
   .data(card_model_array)
   .enter()
   .append("div")
+
   .each(function(d,i) {
     if (!no_dots(d.type)) {
       d3.select(this)
+      .attr("id", "line"+i)
       .style('left',d=>{return d.center_pos-line_children[0].clientWidth/2+size_type;})
       .style('top', dot_children[0].offsetTop+size_type);
     }
@@ -1429,34 +1600,34 @@ function buildMonthPanel(input){
   }
   
   
-  if (test===1){
-    iconMap= new Map(Object.entries(CSVToObject(iconTest)));
+  // if (test===1){
+  //   iconMap= csvToArray(iconTest);
  
 
 
-    console.log(iconMap)
-    let thresholds =  csvToArray(csvTest).sort(function(a, b){
-    v1= a.variable.toLowerCase();
-    v2 = b.variable.toLowerCase();
-    if (v1 < v2) return -1;
-    if (v1 > v2) return 1;
-    return 0;});
+  //   console.log(iconMap)
+  //   let thresholds =  csvToArray(csvTest).sort(function(a, b){
+  //   v1= a.variable.toLowerCase();
+  //   v2 = b.variable.toLowerCase();
+  //   if (v1 < v2) return -1;
+  //   if (v1 > v2) return 1;
+  //   return 0;});
   
-    console.log(thresholds)
-    let data=datat.data.data;
-    let columns =datat.data.columns;
-    data.sort((a,b)=> (a[0]+a[1]+a[2] > b[0]+b[1]+b[2] ? 1 : -1));
+  //   console.log(thresholds)
+  //   let data=datat.data.data;
+  //   let columns =datat.data.columns;
+  //   data.sort((a,b)=> (a[0]+a[1]+a[2] > b[0]+b[1]+b[2] ? 1 : -1));
     
-    resizeFromframe(data);
-    let dateArray =setXAxisSize(data)
-    console.log(dateArray);
-    lineChart(data,dateArray,columns,thresholds);
+  //   resizeFromframe(data);
+  //   let dateArray =setXAxisSize(data)
+  //   console.log(dateArray);
+  //   lineChart(data,dateArray,columns,thresholds);
     
-    build_time_panel(data,dateArray);
+  //   build_time_panel(data,dateArray);
    
-    delay(1000).then(() =>window.scrollTo({top:0 ,left:window.innerWidth,behavior: 'smooth'}));
+  //   delay(1000).then(() =>window.scrollTo({top:0 ,left:window.innerWidth,behavior: 'smooth'}));
     
-  }
+  // }
 
   
 const getApi = async (url) => {
@@ -1487,7 +1658,11 @@ function onMessage(event) {
         console.log(selections);
         console.log(VA_RESULT_NAME);
         va.messagingUtil.postSelectionMessage(VA_RESULT_NAME, selections);
+
+        let data = event.data.data
+        data=formatData(data,timeIndex)
         getApi(thresholdsUrl).then((resp) => {
+
             let thresholds =  csvToArray(resp).sort(
               function(a, b){
                 v1= a.variable.toLowerCase();
@@ -1498,21 +1673,22 @@ function onMessage(event) {
             );
 
             getApi(iconMapUrl).then((resp) => {
-              iconMap = new Map(Object.entries(CSVToObject(resp)));
+              iconMap = csvToArray(resp);
               
               console.log(thresholds)
               console.log(iconMap)
               
-              let data = event.data.data
-              data.sort((a,b)=> (a[0]+a[1]+a[2] > b[0]+b[1]+b[2] ? 1 : -1));
+
+              // data.sort((a,b)=> (a[0]+a[1]+a[2] > b[0]+b[1]+b[2] ? 1 : -1));
               resizeFromframe(data);
               let dateArray =setXAxisSize(data)
               let columns =event.data.columns;
-              lineChart(data,dateArray,columns,thresholds);
+              console.log(dateArray)
+              lineChart(data,dateArray,columns,thresholds,lineHoverIndex);
              
-              build_time_panel(data,dateArray,iconMap);
-                 
-              delay(1000).then(() =>window.scrollTo({top:0 ,left:window.innerWidth,behavior: 'smooth'}));
+              build_time_panel(data,dateArray,timeHoverIndex);
+
+              delay(1000).then(() =>window.scrollTo({top:0 ,left:9999999,behavior: 'smooth'}));
     
             });
         });

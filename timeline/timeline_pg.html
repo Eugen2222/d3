@@ -37,6 +37,9 @@
      }
 
 
+body {
+        font-family: 'Noto Sans TC','Noto Sans', 'AvenirNext',Helvetica,Arial,sans-serif !important;
+}
 
 .tooltip{
   font-size: 12px;
@@ -48,7 +51,9 @@
   font-family:"Arial", sans-serif;
   /* Position the tooltip */
   position: absolute;
-  z-index: 1;
+  z-index: 6;
+  padding: 1px;
+  background-color: white;
 }
 
 
@@ -225,8 +230,8 @@ vertical-align: bottom;
    border:2px black solid;
     z-index: 1;
     overflow-x:hidden;
-    overflow-y:hidden;
-    max-height: 100px;
+    overflow-y:auto;
+    max-height: 60px;
     max-width: 200px;
 }    
 #line_sec div{
@@ -240,24 +245,12 @@ vertical-align: bottom;
 
 }    
 
-
-.fa-exclamation-triangle:before  { 
-      color: #f09f1c;
-   padding-right: 5px; /* If you need more space b/w contents */
-}
+#card_sec img{
+    width:20px;
+    height:20px;
 
 
-.fa-image:before  { 
-
-   padding-right: 5px; /* If you need more space b/w contents */
-}
-
-
-.fa-eye-dropper:before  { 
-
-   padding-right: 5px; /* If you need more space b/w contents */
-}
-
+}    
 
 </style>
 <body>
