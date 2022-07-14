@@ -1,0 +1,10 @@
+﻿variable,lower_bound,upper_bound,range_0,range_1
+HR,50,120,30,220
+RES,12,35,0,50
+NBPS,90,160,50,250
+NBPD,60,80,10,130
+NBPm,65,120,10,180
+ABPS,90,160,50,250
+ABPD,60,80,10,130
+ABPm,65,110,10,180
+BT,35,38,31,42

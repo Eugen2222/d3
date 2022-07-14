@@ -1,42 +1,317 @@
-﻿紀錄日期,紀錄時間,分隔,圖示id,執行內容,簡碼,說明,HR,NBPd,NBPm,RESP,ABPm,ABPs,ABPd,NBPs
-05May2022,5:47,8,1,CBC,LAB,AbsNeutro.#:   15370    Basophil:       1       Eosinophil:       1     Hematocrit:      38     Hemoglobin:      13     HgB:      13            Lymphocyte:      14,142,,,46,,,,
-05May2022,5:47,8,2,ELECTROLYTE,LAB,Ca(Calcium):       8    Cl(Chloride):     105   K(Potassium):       5   Na(Sodium):     136,142,,,46,,,,
-05May2022,5:47,8,3,INFECTION,LAB,CRP:       1,142,,,46,,,,
-05May2022,5:47,8,4,LIVER_RENAL,LAB,ALT/GPT:       6        AST/GOT:      28        BUN:      16            Creatinine:       1     D.Bilirubin:       1    Dbil/Tbilratio:      19 TotalBilirubin:       4,142,,,46,,,,
-05May2022,5:47,8,5,METABOLISM,LAB,Sugar:     129,142,,,46,,,,
-05May2022,8:30,8,6,CBC,LAB,AbsNeutro.#:   15370    Basophil:       1       Eosinophil:       1     Hematocrit:      38     Hemoglobin:      13     HgB:      13            Lymphocyte:      14,136,,,42,,,,
-05May2022,8:30,8,7,ELECTROLYTE,LAB,Ca(Calcium):       8    Cl(Chloride):     105   K(Potassium):       5   Na(Sodium):     136,136,,,42,,,,
-05May2022,8:30,8,8,INFECTION,LAB,CRP:       1,136,,,42,,,,
-05May2022,8:30,8,9,LIVER_RENAL,LAB,ALT/GPT:       6        AST/GOT:      28        BUN:      16            Creatinine:       1     D.Bilirubin:       1    Dbil/Tbilratio:      19 TotalBilirubin:       4,136,,,42,,,,
-05May2022,8:30,8,10,METABOLISM,LAB,Sugar:     129,136,,,42,,,,
-05May2022,13:00,8,11,CBC,LAB,AbsNeutro.#:   15370    Basophil:       1       Eosinophil:       1     Hematocrit:      38     Hemoglobin:      13     HgB:      13            Lymphocyte:      14,,,,,,,,
-05May2022,13:00,8,12,ELECTROLYTE,LAB,Ca(Calcium):       8    Cl(Chloride):     105   K(Potassium):       5   Na(Sodium):     136,,,,,,,,
-05May2022,13:00,8,13,INFECTION,LAB,CRP:       1,,,,,,,,
-05May2022,13:00,8,14,LIVER_RENAL,LAB,ALT/GPT:       6        AST/GOT:      28        BUN:      16            Creatinine:       1     D.Bilirubin:       1    Dbil/Tbilratio:      19 TotalBilirubin:       4,,,,,,,,
-05May2022,13:00,8,15,METABOLISM,LAB,Sugar:     129,,,,,,,,
-05May2022,16:10,8,16,CBC,LAB,AbsNeutro.#:   15370    Basophil:       1       Eosinophil:       1     Hematocrit:      38     Hemoglobin:      13     HgB:      13            Lymphocyte:      14,140,,,43,,,,
-05May2022,16:10,8,17,ELECTROLYTE,LAB,Ca(Calcium):       8    Cl(Chloride):     105   K(Potassium):       5   Na(Sodium):     136,140,,,43,,,,
-05May2022,16:10,8,18,INFECTION,LAB,CRP:       1,140,,,43,,,,
-05May2022,16:10,8,19,LIVER_RENAL,LAB,ALT/GPT:       6        AST/GOT:      28        BUN:      16            Creatinine:       1     D.Bilirubin:       1    Dbil/Tbilratio:      19 TotalBilirubin:       4,140,,,43,,,,
-05May2022,16:10,8,20,METABOLISM,LAB,Sugar:     129,140,,,43,,,,
-05May2022,19:03,8,21,CBC,LAB,AbsNeutro.#:   15370    Basophil:       1       Eosinophil:       1     Hematocrit:      38     Hemoglobin:      13     HgB:      13            Lymphocyte:      14,123,,,,,,,
-05May2022,19:03,8,22,ELECTROLYTE,LAB,Ca(Calcium):       8    Cl(Chloride):     105   K(Potassium):       5   Na(Sodium):     136,123,,,,,,,
-05May2022,19:03,8,23,INFECTION,LAB,CRP:       1,123,,,,,,,
-05May2022,19:03,8,24,LIVER_RENAL,LAB,ALT/GPT:       6        AST/GOT:      28        BUN:      16            Creatinine:       1     D.Bilirubin:       1    Dbil/Tbilratio:      19 TotalBilirubin:       4,123,,,,,,,
-05May2022,19:03,8,1,METABOLISM,LAB,Sugar:     129,123,,,,,,,
-06May2022,0:35,4,2,LOWER G-I SERIES,graphy,,129,,,,,,,
-06May2022,2:32,4,3,LOWER G-I SERIES,graphy,,121,,,,,,,
-06May2022,8:02,4,4,LOWER G-I SERIES,graphy,,,43,54,,,,,76
-06May2022,8:15,4,5,LOWER G-I SERIES,graphy,,129,,,,,,,
-06May2022,16:08,4,6,LOWER G-I SERIES,graphy,,112,,,,,,,
-06May2022,21:31,4,7,LOWER G-I SERIES,graphy,,,,,,,,,
-07May2022,0:20,,8,,,,122,,,,,,,
-07May2022,5:30,,9,,,,139,,,,,,,
-07May2022,8:24,,10,,,,,50,60,,,,,80
-07May2022,9:01,,11,,,,143,,,,,,,
-07May2022,13:00,,12,,,,110,,,,,,,
-07May2022,16:11,,13,,,,119,,,,,,,
-08May2022,0:15,1,14,CHEST P-A VIEW,X-ray,,114,,,,,,,
-08May2022,0:15,8,15,LIVER_RENAL,LAB,TotalBili(MIC):       8,114,,,,,,,
-08May2022,8:05,1,16,CHEST P-A VIEW,X-ray,,143,55,60,,,,,70
-08May2022,8:05,8,17,LIVER_RENAL,LAB,TotalBili(MIC):       8,143,55,60,,,,,70
+﻿病歷號,紀錄日期,紀錄時間,分隔,ICON_ID,執行內容,說明,說明1,HR,NBPm,RESP,ABPm,BT
+64,20220421,00:00,2,9,Micafungin(IV)(1) Piperacillin(IV)(1) Teicoplanin(IV)(4),NBPs:144    NBPd:91    ABPs:.    ABPd:.,,,109,20,,37.3
+64,20220421,00:00,4,7,INTUBATION,NBPs:144    NBPd:91    ABPs:.    ABPd:.,,,109,20,,37.3
+64,20220421,00:00,4,7,ENDOTRACHEAL TUBE ,NBPs:144    NBPd:91    ABPs:.    ABPd:.,,,109,20,,37.3
+64,20220421,00:00,8,3,BLOOD TRANSFUSION,NBPs:144    NBPd:91    ABPs:.    ABPd:.,,,109,20,,37.3
+64,20220421,00:00,10,17,,NBPs:144    NBPd:91    ABPs:.    ABPd:.,,,109,20,,37.3
+64,20220421,08:00,,,,NBPs:136    NBPd:77    ABPs:.    ABPd:.,,119,97,22,,37.8
+64,20220421,10:00,,,,NBPs:.    NBPd:.    ABPs:.    ABPd:.,,,,,,37.3
+64,20220421,11:00,,,,NBPs:156    NBPd:103    ABPs:.    ABPd:.,,,121,22,,38.2
+64,20220421,12:00,3,8,新陳代謝,NBPs:158    NBPd:96    ABPs:.    ABPd:.,Cortisol:      25,,117,22,,38.4
+64,20220421,12:00,3,8,肝腎功能,NBPs:158    NBPd:96    ABPs:.    ABPd:.,ALT/GPT:      23        AST/GOT:      31        Albumin:       3        BUN(B):      49         Creatinine(B):       3  DirectBilirubi:       0 TotalBilirubin:       0,,117,22,,38.4
+64,20220421,12:00,3,8,感染,NBPs:158    NBPd:96    ABPs:.    ABPd:.,CRP:     220            Procalcitonin:      13,,117,22,,38.4
+64,20220421,12:00,3,8,GAS,NBPs:158    NBPd:96    ABPs:.    ABPd:.,ABE:      -2            HCO3:      21           SAT:      89            SBC:      22            SBE:      -3            TCO2:      22           Temperature:      37,,117,22,,38.4
+64,20220421,12:00,3,8,電解質,NBPs:158    NBPd:96    ABPs:.    ABPd:.,K:       4              Na:     154,,117,22,,38.4
+64,20220421,12:00,3,24,凝血功能,NBPs:158    NBPd:96    ABPs:.    ABPd:.,APTT:      30           INR:       1            Nor.plasmamean:      10 Nor.plasmamean:      28 P.T:      11,,117,22,,38.4
+64,20220421,12:00,3,24,CBC,NBPs:158    NBPd:96    ABPs:.    ABPd:.,AbsNeutro.#:   12502    Basophil:       0       Eosinophil:       0     Lymphocyte:       6     MCH:      30            MCHC:      32           MCV:      94,,117,22,,38.4
+64,20220421,12:00,3,8,心肺檢驗,NBPs:158    NBPd:96    ABPs:.    ABPd:.,NT-ProBNP:   12846,,117,22,,38.4
+64,20220421,14:00,,,,NBPs:170    NBPd:102    ABPs:.    ABPd:.,,118,125,24,,37.7
+64,20220421,15:00,,,,NBPs:174    NBPd:100    ABPs:.    ABPd:.,,141,125,17,,37.7
+64,20220421,16:00,,,,NBPs:128    NBPd:81    ABPs:.    ABPd:.,,,97,22,,38.7
+64,20220421,18:00,3,8,GAS,,ABE:      -8            HCO3:      20           SAT:      99            SBC:      18            SBE:      -8            TCO2:      22           Temperature:      37,,,,,
+64,20220421,18:00,3,8,心肺檢驗,,Troponin-I:       0,,,,,
+64,20220421,19:00,,,,NBPs:150    NBPd:77    ABPs:.    ABPd:.,,117,101,19,,38.5
+64,20220421,21:00,,,,NBPs:129    NBPd:79    ABPs:.    ABPd:.,,115,96,21,,
+64,20220421,22:00,,,,NBPs:112    NBPd:72    ABPs:.    ABPd:.,,119,85,17,,
+64,20220422,00:00,2,9,Micafungin(IV)(2) Piperacillin(IV)(2) Teicoplanin(IV)(5),NBPs:108    NBPd:67    ABPs:.    ABPd:.,,109,81,17,,
+64,20220422,00:00,4,8,NG FEEDING (1500KCAL),NBPs:108    NBPd:67    ABPs:.    ABPd:.,,109,81,17,,
+64,20220422,00:00,7,15, DOPPLER AND COLOR,NBPs:108    NBPd:67    ABPs:.    ABPd:.,,109,81,17,,
+64,20220422,01:00,,,,NBPs:110    NBPd:60    ABPs:.    ABPd:.,,110,77,16,,36.9
+64,20220422,03:00,,,,NBPs:94    NBPd:62    ABPs:.    ABPd:.,,103,73,19,,
+64,20220422,04:00,,,,NBPs:97    NBPd:60    ABPs:.    ABPd:.,,104,72,18,,36.4
+64,20220422,06:00,,,,NBPs:104    NBPd:56    ABPs:.    ABPd:.,,99,72,18,,
+64,20220422,07:00,,,,NBPs:111    NBPd:64    ABPs:.    ABPd:.,,102,80,18,,
+64,20220422,09:00,,,,NBPs:128    NBPd:56    ABPs:.    ABPd:.,,110,80,19,,35.8
+64,20220422,10:00,,,,NBPs:103    NBPd:54    ABPs:.    ABPd:.,,100,70,20,,
+64,20220422,12:00,,,,NBPs:114    NBPd:48    ABPs:.    ABPd:.,,104,70,14,,
+64,20220422,13:00,,,,NBPs:108    NBPd:54    ABPs:.    ABPd:.,,106,72,21,,36.1
+64,20220422,15:00,,,,NBPs:114    NBPd:47    ABPs:.    ABPd:.,,104,69,21,,
+64,20220422,16:00,,,,NBPs:112    NBPd:59    ABPs:.    ABPd:.,,101,77,19,,36.3
+64,20220422,18:00,,,,NBPs:103    NBPd:50    ABPs:.    ABPd:.,,100,68,20,,
+64,20220422,19:00,,,,NBPs:97    NBPd:57    ABPs:.    ABPd:.,,95,70,22,,
+64,20220422,21:00,,,,NBPs:109    NBPd:54    ABPs:.    ABPd:.,,102,72,18,,36.2
+64,20220422,22:00,,,,NBPs:102    NBPd:52    ABPs:.    ABPd:.,,102,68,19,,
+64,20220423,00:00,2,9,Micafungin(IV)(3) Piperacillin(IV)(3) Teicoplanin(IV)(6),NBPs:.    NBPd:.    ABPs:94    ABPd:54,,105,,22,67,
+64,20220423,01:00,,,,NBPs:.    NBPd:.    ABPs:108    ABPd:56,,97,,21,73,36.6
+64,20220423,03:00,,,,NBPs:.    NBPd:.    ABPs:112    ABPd:56,,91,,23,75,
+64,20220423,04:00,,,,NBPs:.    NBPd:.    ABPs:132    ABPd:64,,99,,21,87,36
+64,20220423,06:00,3,8,電解質,NBPs:.    NBPd:.    ABPs:135    ABPd:65,Na:     153,97,,23,88,
+64,20220423,07:00,,,,NBPs:.    NBPd:.    ABPs:116    ABPd:59,,95,,21,78,
+64,20220423,09:00,,,,NBPs:118    NBPd:61    ABPs:119    ABPd:57,,97,80,20,78,35.2
+64,20220423,10:00,,,,NBPs:.    NBPd:.    ABPs:115    ABPd:57,,95,,21,76,
+64,20220423,12:00,,,,NBPs:.    NBPd:.    ABPs:126    ABPd:61,,97,,14,83,
+64,20220423,13:00,,,,NBPs:.    NBPd:.    ABPs:112    ABPd:57,,95,,18,75,36.4
+64,20220423,15:00,,,,NBPs:.    NBPd:.    ABPs:124    ABPd:62,,92,,12,83,
+64,20220423,16:00,,,,NBPs:114    NBPd:67    ABPs:127    ABPd:60,,97,83,19,82,35.9
+64,20220423,18:00,,,,NBPs:.    NBPd:.    ABPs:113    ABPd:51,,95,,15,72,
+64,20220423,19:00,,,,NBPs:.    NBPd:.    ABPs:124    ABPd:58,,89,,18,80,
+64,20220423,21:00,,,,NBPs:.    NBPd:.    ABPs:127    ABPd:58,,93,,22,81,35.5
+64,20220423,22:00,,,,NBPs:.    NBPd:.    ABPs:134    ABPd:60,,94,,19,84,
+64,20220424,00:00,2,9,Micafungin(IV)(4) Piperacillin(IV)(4) Teicoplanin(IV)(7),NBPs:.    NBPd:.    ABPs:140    ABPd:61,,86,,29,87,
+64,20220424,01:00,,,,NBPs:.    NBPd:.    ABPs:141    ABPd:63,,94,,23,89,37
+64,20220424,03:00,,,,NBPs:.    NBPd:.    ABPs:150    ABPd:66,,95,,16,94,
+64,20220424,04:00,,,,NBPs:.    NBPd:.    ABPs:158    ABPd:70,,92,,21,99,36.3
+64,20220424,06:00,,,,NBPs:.    NBPd:.    ABPs:165    ABPd:70,,98,,21,102,
+64,20220424,07:00,,,,NBPs:.    NBPd:.    ABPs:166    ABPd:68,,100,,23,100,
+64,20220424,09:00,,,,NBPs:126    NBPd:74    ABPs:142    ABPd:65,,106,91,23,91,37.4
+64,20220424,10:00,,,,NBPs:.    NBPd:.    ABPs:110    ABPd:51,,106,,25,71,38.2
+64,20220424,11:00,,,,NBPs:.    NBPd:.    ABPs:.    ABPd:.,,,,,,37.7
+64,20220424,12:00,,,,NBPs:.    NBPd:.    ABPs:113    ABPd:54,,96,,16,74,
+64,20220424,13:00,,,,NBPs:.    NBPd:.    ABPs:105    ABPd:53,,95,,23,70,36.6
+64,20220424,15:00,,,,NBPs:.    NBPd:.    ABPs:108    ABPd:53,,96,,18,71,
+64,20220424,16:00,,,,NBPs:122    NBPd:68    ABPs:119    ABPd:58,,94,86,20,78,36.8
+64,20220424,18:00,,,,NBPs:.    NBPd:.    ABPs:104    ABPd:51,,93,,19,69,
+64,20220424,19:00,,,,NBPs:.    NBPd:.    ABPs:126    ABPd:56,,90,,20,79,
+64,20220424,21:00,,,,NBPs:.    NBPd:.    ABPs:140    ABPd:61,,89,,20,87,35.2
+64,20220424,22:00,,,,NBPs:.    NBPd:.    ABPs:132    ABPd:57,,92,,18,82,
+64,20220425,00:00,,,,NBPs:.    NBPd:.    ABPs:148    ABPd:65,,91,,22,93,
+64,20220425,01:00,,,,NBPs:131    NBPd:73    ABPs:.    ABPd:.,,94,92,23,,36.2
+64,20220425,03:00,,,,NBPs:136    NBPd:68    ABPs:.    ABPd:.,,86,91,21,,
+64,20220425,04:00,,,,NBPs:130    NBPd:67    ABPs:.    ABPd:.,,95,88,20,,36
+64,20220425,06:00,3,8,肝腎功能,NBPs:125    NBPd:69    ABPs:.    ABPd:.,Albumin:       3        BUN(B):      63         Creatinine(B):       3,95,88,22,,
+64,20220425,06:00,3,8,感染,NBPs:125    NBPd:69    ABPs:.    ABPd:.,CRP:     115            Procalcitonin:       3,95,88,22,,
+64,20220425,06:00,3,8,電解質,NBPs:125    NBPd:69    ABPs:.    ABPd:.,Calcium:       9        K:       4              Mg:       1             Na:     149,95,88,22,,
+64,20220425,06:00,3,24,CBC,NBPs:125    NBPd:69    ABPs:.    ABPd:.,AbsNeutro.#:   14288    Basophil:       0       Eosinophil:       2     Lymphocyte:       7     MCH:      30            MCHC:      32           MCV:      95,95,88,22,,
+64,20220425,07:00,,,,NBPs:119    NBPd:60    ABPs:.    ABPd:.,,97,79,23,,
+64,20220425,09:00,,,,NBPs:121    NBPd:58    ABPs:.    ABPd:.,,98,79,24,,36.4
+64,20220425,10:00,,,,NBPs:114    NBPd:53    ABPs:.    ABPd:.,,101,73,20,,
+64,20220425,12:00,,,,NBPs:165    NBPd:81    ABPs:.    ABPd:.,,119,109,34,,
+64,20220425,13:00,,,,NBPs:88    NBPd:53    ABPs:.    ABPd:.,,113,65,19,,37.3
+64,20220425,14:00,,,,NBPs:103    NBPd:49    ABPs:.    ABPd:.,,113,67,20,,
+64,20220425,15:00,,,,NBPs:101    NBPd:46    ABPs:94    ABPd:40,,115,64,17,58,
+64,20220425,16:00,,,,NBPs:134    NBPd:57    ABPs:151    ABPd:60,,128,83,19,90,37.2
+64,20220425,18:00,,,,NBPs:.    NBPd:.    ABPs:108    ABPd:51,,117,,19,70,
+64,20220425,19:00,,,,NBPs:.    NBPd:.    ABPs:122    ABPd:53,,114,,17,76,
+64,20220425,21:00,,,,NBPs:.    NBPd:.    ABPs:105    ABPd:48,,108,,14,67,37.2
+64,20220425,22:00,,,,NBPs:.    NBPd:.    ABPs:91    ABPd:46,,108,,21,61,
+64,20220426,00:00,1,10,2 _PUS  _Yeast-like,NBPs:.    NBPd:.    ABPs:95    ABPd:47,,105,,15,63,
+64,20220426,00:00,1,10,1 _PUS  _Enterococcus faecium,NBPs:.    NBPd:.    ABPs:95    ABPd:47,,105,,15,63,
+64,20220426,01:00,,,,NBPs:101    NBPd:68    ABPs:111    ABPd:51,,101,79,18,48,37.3
+64,20220426,03:00,,,,NBPs:.    NBPd:.    ABPs:119    ABPd:52,,98,,15,74,
+64,20220426,04:00,,,,NBPs:.    NBPd:.    ABPs:129    ABPd:56,,94,,15,80,36.9
+64,20220426,06:00,,,,NBPs:.    NBPd:.    ABPs:141    ABPd:57,,97,,14,85,
+64,20220426,07:00,,,,NBPs:.    NBPd:.    ABPs:131    ABPd:55,,108,,17,80,
+64,20220426,09:00,,,,NBPs:113    NBPd:55    ABPs:138    ABPd:60,,97,74,17,86,37
+64,20220426,10:00,,,,NBPs:.    NBPd:.    ABPs:127    ABPd:56,,102,,18,80,
+64,20220426,12:00,3,8,電解質,NBPs:.    NBPd:.    ABPs:115    ABPd:54,Calcium:       9        K:       3              Mg:       2             Na:     148,92,,20,74,
+64,20220426,13:00,,,,NBPs:.    NBPd:.    ABPs:121    ABPd:58,,93,,18,79,36.4
+64,20220426,15:00,,,,NBPs:.    NBPd:.    ABPs:109    ABPd:53,,89,,17,72,
+64,20220426,16:00,,,,NBPs:134    NBPd:66    ABPs:131    ABPd:57,,97,89,17,82,36.1
+64,20220426,18:00,,,,NBPs:.    NBPd:.    ABPs:134    ABPd:55,,97,,19,81,
+64,20220426,19:00,,,,NBPs:.    NBPd:.    ABPs:139    ABPd:59,,97,,21,86,
+64,20220426,21:00,,,,NBPs:.    NBPd:.    ABPs:112    ABPd:51,,94,,18,71,36.5
+64,20220426,22:00,,,,NBPs:.    NBPd:.    ABPs:129    ABPd:55,,89,,18,79,
+64,20220427,00:00,1,10,1 _SP   _Mold,NBPs:.    NBPd:.    ABPs:144    ABPd:63,,94,,19,90,
+64,20220427,01:00,,,,NBPs:.    NBPd:.    ABPs:151    ABPd:63,,92,,20,92,36.9
+64,20220427,03:00,,,,NBPs:.    NBPd:.    ABPs:148    ABPd:66,,93,,19,93,
+64,20220427,04:00,,,,NBPs:.    NBPd:.    ABPs:146    ABPd:61,,95,,18,89,36.8
+64,20220427,06:00,,,,NBPs:.    NBPd:.    ABPs:141    ABPd:65,,98,,24,90,
+64,20220427,07:00,,,,NBPs:.    NBPd:.    ABPs:146    ABPd:62,,103,,20,90,
+64,20220427,09:00,,,,NBPs:119    NBPd:58    ABPs:134    ABPd:62,,106,78,14,86,37.4
+64,20220427,10:00,,,,NBPs:.    NBPd:.    ABPs:116    ABPd:57,,106,,20,76,
+64,20220427,12:00,,,,NBPs:.    NBPd:.    ABPs:101    ABPd:53,,107,,21,69,
+64,20220427,13:00,,,,NBPs:.    NBPd:.    ABPs:103    ABPd:54,,97,,21,70,37.3
+64,20220427,15:00,,,,NBPs:.    NBPd:.    ABPs:108    ABPd:53,,94,,19,71,
+64,20220427,16:00,,,,NBPs:115    NBPd:51    ABPs:116    ABPd:55,,92,72,17,75,36.1
+64,20220427,18:00,,,,NBPs:.    NBPd:.    ABPs:133    ABPd:61,,90,,19,85,
+64,20220427,19:00,,,,NBPs:.    NBPd:.    ABPs:133    ABPd:60,,96,,18,84,
+64,20220427,21:00,,,,NBPs:.    NBPd:.    ABPs:144    ABPd:62,,91,,20,89,35.8
+64,20220427,22:00,,,,NBPs:.    NBPd:.    ABPs:132    ABPd:59,,92,,20,83,
+64,20220428,00:00,1,10,1 _SP   _Mold,NBPs:.    NBPd:.    ABPs:131    ABPd:59,,91,,20,83,
+64,20220428,00:00,5,14,BRONCHOSCOPY,NBPs:.    NBPd:.    ABPs:131    ABPd:59,,91,,20,83,
+64,20220428,00:00,7,1,C.T.  (-),NBPs:.    NBPd:.    ABPs:131    ABPd:59,,91,,20,83,
+64,20220428,01:00,,,,NBPs:.    NBPd:.    ABPs:139    ABPd:61,,92,,20,87,37
+64,20220428,03:00,,,,NBPs:.    NBPd:.    ABPs:152    ABPd:63,,91,,18,93,
+64,20220428,04:00,,,,NBPs:.    NBPd:.    ABPs:158    ABPd:69,,95,,23,98,36.6
+64,20220428,06:00,3,8,新陳代謝,NBPs:.    NBPd:.    ABPs:153    ABPd:65,Cortisol:      10       T4:       5,94,,21,94,
+64,20220428,06:00,3,8,肝腎功能,NBPs:.    NBPd:.    ABPs:153    ABPd:65,AST/GOT:      23        Albumin:       3,94,,21,94,
+64,20220428,06:00,3,8,感染,NBPs:.    NBPd:.    ABPs:153    ABPd:65,Procalcitonin:       1,94,,21,94,
+64,20220428,06:00,3,8,電解質,NBPs:.    NBPd:.    ABPs:153    ABPd:65,Calcium:      10        InorganicP:       4     K:       3              Na:     143,94,,21,94,
+64,20220428,06:00,3,24,CBC,NBPs:.    NBPd:.    ABPs:153    ABPd:65,AbsNeutro.#:   11247    Basophil:       0       Eosinophil:       2     Lymphocyte:      11     MCH:      30            MCHC:      31           MCV:      98,94,,21,94,
+64,20220428,06:00,3,8,心肺檢驗,NBPs:.    NBPd:.    ABPs:153    ABPd:65,NT-ProBNP:    1295,94,,21,94,
+64,20220428,07:00,,,,NBPs:.    NBPd:.    ABPs:142    ABPd:62,,93,,22,88,
+64,20220428,09:00,,,,NBPs:.    NBPd:.    ABPs:149    ABPd:63,,96,,22,92,36
+64,20220428,10:00,,,,NBPs:.    NBPd:.    ABPs:141    ABPd:59,,91,,21,87,
+64,20220428,12:00,,,,NBPs:.    NBPd:.    ABPs:115    ABPd:52,,98,,21,73,36.3
+64,20220428,13:00,,,,NBPs:.    NBPd:.    ABPs:121    ABPd:55,,94,,24,77,
+64,20220428,14:00,,,,NBPs:.    NBPd:.    ABPs:130    ABPd:58,,91,,25,82,
+64,20220428,15:00,,,,NBPs:.    NBPd:.    ABPs:133    ABPd:61,,93,,21,85,
+64,20220428,16:00,,,,NBPs:122    NBPd:57    ABPs:127    ABPd:58,,91,79,23,81,36.2
+64,20220428,18:00,,,,NBPs:.    NBPd:.    ABPs:137    ABPd:59,,92,,23,85,
+64,20220428,19:00,,,,NBPs:.    NBPd:.    ABPs:133    ABPd:57,,91,,22,82,
+64,20220428,21:00,,,,NBPs:.    NBPd:.    ABPs:141    ABPd:60,,92,,21,87,36.8
+64,20220428,22:00,,,,NBPs:.    NBPd:.    ABPs:140    ABPd:59,,96,,25,86,
+64,20220429,00:00,,,,NBPs:.    NBPd:.    ABPs:142    ABPd:60,,93,,24,87,
+64,20220429,01:00,,,,NBPs:.    NBPd:.    ABPs:147    ABPd:61,,100,,24,90,36
+64,20220429,03:00,,,,NBPs:.    NBPd:.    ABPs:135    ABPd:56,,97,,23,82,
+64,20220429,04:00,,,,NBPs:.    NBPd:.    ABPs:129    ABPd:59,,98,,23,82,36.6
+64,20220429,06:00,,,,NBPs:.    NBPd:.    ABPs:117    ABPd:58,,97,,22,78,
+64,20220429,07:00,,,,NBPs:.    NBPd:.    ABPs:119    ABPd:58,,96,,21,78,
+64,20220429,09:00,,,,NBPs:.    NBPd:.    ABPs:96    ABPd:50,,91,,17,65,36.6
+64,20220429,10:00,,,,NBPs:.    NBPd:.    ABPs:145    ABPd:65,,88,,22,92,
+64,20220429,12:00,3,8,電解質,NBPs:.    NBPd:.    ABPs:121    ABPd:62,Calcium:       9        InorganicP:       4     K:       4              Mg:       2             Na:     143,90,,24,82,
+64,20220429,13:00,,,,NBPs:.    NBPd:.    ABPs:115    ABPd:55,,85,,22,75,36.6
+64,20220429,15:00,,,,NBPs:.    NBPd:.    ABPs:96    ABPd:49,,87,,22,65,
+64,20220429,16:00,,,,NBPs:115    NBPd:57    ABPs:135    ABPd:61,,92,76,20,85,37.1
+64,20220429,18:00,,,,NBPs:.    NBPd:.    ABPs:137    ABPd:60,,91,,20,86,
+64,20220429,19:00,,,,NBPs:.    NBPd:.    ABPs:128    ABPd:56,,92,,21,80,
+64,20220429,21:00,,,,NBPs:.    NBPd:.    ABPs:132    ABPd:64,,88,,20,87,37
+64,20220429,22:00,,,,NBPs:.    NBPd:.    ABPs:111    ABPd:55,,90,,21,74,
+64,20220430,00:00,,,,NBPs:.    NBPd:.    ABPs:135    ABPd:61,,85,,18,86,
+64,20220430,01:00,,,,NBPs:.    NBPd:.    ABPs:114    ABPd:54,,84,,18,74,36.3
+64,20220430,03:00,,,,NBPs:.    NBPd:.    ABPs:138    ABPd:63,,85,,22,88,
+64,20220430,04:00,,,,NBPs:.    NBPd:.    ABPs:142    ABPd:63,,86,,21,89,37
+64,20220430,06:00,,,,NBPs:.    NBPd:.    ABPs:132    ABPd:59,,86,,24,83,
+64,20220430,07:00,,,,NBPs:.    NBPd:.    ABPs:106    ABPd:51,,80,,19,69,
+64,20220430,09:00,,,,NBPs:134    NBPd:57    ABPs:132    ABPd:62,,84,83,17,85,36.4
+64,20220430,10:00,,,,NBPs:.    NBPd:.    ABPs:106    ABPd:51,,82,,17,69,
+64,20220430,12:00,,,,NBPs:.    NBPd:.    ABPs:110    ABPd:50,,81,,19,70,
+64,20220430,13:00,,,,NBPs:.    NBPd:.    ABPs:113    ABPd:49,,80,,20,70,36
+64,20220430,15:00,,,,NBPs:.    NBPd:.    ABPs:121    ABPd:49,,83,,18,73,
+64,20220430,16:00,,,,NBPs:110    NBPd:60    ABPs:128    ABPd:55,,78,77,21,79,35.1
+64,20220430,18:00,,,,NBPs:.    NBPd:.    ABPs:131    ABPd:57,,80,,23,82,
+64,20220430,19:00,,,,NBPs:.    NBPd:.    ABPs:111    ABPd:48,,76,,20,69,
+64,20220430,21:00,,,,NBPs:.    NBPd:.    ABPs:122    ABPd:55,,75,,19,77,36.7
+64,20220430,22:00,,,,NBPs:.    NBPd:.    ABPs:117    ABPd:53,,79,,19,74,
+64,20220501,00:00,,,,NBPs:.    NBPd:.    ABPs:125    ABPd:56,,79,,18,79,
+64,20220501,01:00,,,,NBPs:136    NBPd:59    ABPs:134    ABPd:56,,81,85,17,82,36.9
+64,20220501,03:00,,,,NBPs:.    NBPd:.    ABPs:131    ABPd:58,,80,,19,82,
+64,20220501,04:00,,,,NBPs:.    NBPd:.    ABPs:147    ABPd:64,,88,,19,91,37.7
+64,20220501,06:00,,,,NBPs:.    NBPd:.    ABPs:142    ABPd:68,,88,,20,93,
+64,20220501,07:00,,,,NBPs:.    NBPd:.    ABPs:100    ABPd:48,,77,,17,65,
+64,20220501,09:00,,,,NBPs:.    NBPd:.    ABPs:141    ABPd:61,,87,,17,88,36.4
+64,20220501,10:00,,,,NBPs:.    NBPd:.    ABPs:139    ABPd:58,,87,,20,85,
+64,20220501,12:00,,,,NBPs:.    NBPd:.    ABPs:133    ABPd:56,,88,,23,82,
+64,20220501,13:00,,,,NBPs:.    NBPd:.    ABPs:120    ABPd:52,,85,,18,74,37.2
+64,20220501,15:00,,,,NBPs:.    NBPd:.    ABPs:130    ABPd:56,,90,,22,81,
+64,20220501,16:00,,,,NBPs:114    NBPd:52    ABPs:131    ABPd:57,,88,73,21,81,36.3
+64,20220501,18:00,,,,NBPs:.    NBPd:.    ABPs:134    ABPd:55,,88,,19,81,
+64,20220501,19:00,,,,NBPs:.    NBPd:.    ABPs:133    ABPd:59,,90,,23,83,
+64,20220501,21:00,,,,NBPs:.    NBPd:.    ABPs:114    ABPd:58,,84,,20,77,37.8
+64,20220501,22:00,,,,NBPs:.    NBPd:.    ABPs:132    ABPd:62,,85,,19,85,36.9
+64,20220502,00:00,,,,NBPs:.    NBPd:.    ABPs:133    ABPd:61,,85,,20,85,
+64,20220502,01:00,,,,NBPs:.    NBPd:.    ABPs:149    ABPd:66,,85,,20,94,36
+64,20220502,03:00,,,,NBPs:.    NBPd:.    ABPs:128    ABPd:57,,79,,17,81,
+64,20220502,04:00,,,,NBPs:.    NBPd:.    ABPs:135    ABPd:60,,85,,20,85,37
+64,20220502,06:00,3,8,肝腎功能,NBPs:.    NBPd:.    ABPs:100    ABPd:52,ALT/GPT:      24        Albumin:       3        BUN(B):      55         Creatinine(B):       3  TotalBilirubin:       0,82,,17,68,
+64,20220502,06:00,3,8,感染,NBPs:.    NBPd:.    ABPs:100    ABPd:52,CRP:      33,82,,17,68,
+64,20220502,06:00,3,8,電解質,NBPs:.    NBPd:.    ABPs:100    ABPd:52,Calcium:       9        InorganicP:       4     K:       3              Mg:       2             Na:     144,82,,17,68,
+64,20220502,06:00,3,24,凝血功能,NBPs:.    NBPd:.    ABPs:100    ABPd:52,INR:       1            Nor.plasmamean:      10 P.T:      10,82,,17,68,
+64,20220502,06:00,3,24,CBC,NBPs:.    NBPd:.    ABPs:100    ABPd:52,AbsNeutro.#:    8138    Basophil:       1       Eosinophil:       3     Lymphocyte:      13     MCH:      30            MCHC:      30           MCV:     100,82,,17,68,
+64,20220502,06:00,3,8,心肺檢驗,NBPs:.    NBPd:.    ABPs:100    ABPd:52,NT-ProBNP:    1237,82,,17,68,
+64,20220502,07:00,,,,NBPs:.    NBPd:.    ABPs:120    ABPd:57,,81,,17,78,
+64,20220502,09:00,,,,NBPs:.    NBPd:.    ABPs:149    ABPd:65,,89,,22,93,36.5
+64,20220502,10:00,,,,NBPs:.    NBPd:.    ABPs:143    ABPd:61,,89,,20,88,
+64,20220502,12:00,,,,NBPs:.    NBPd:.    ABPs:132    ABPd:57,,87,,18,82,
+64,20220502,13:00,,,,NBPs:.    NBPd:.    ABPs:150    ABPd:63,,89,,22,92,35.9
+64,20220502,15:00,,,,NBPs:.    NBPd:.    ABPs:145    ABPd:63,,90,,25,90,
+64,20220502,16:00,,,,NBPs:135    NBPd:45    ABPs:156    ABPd:62,,88,75,22,93,36.8
+64,20220502,18:00,,,,NBPs:.    NBPd:.    ABPs:151    ABPd:61,,92,,22,91,
+64,20220502,19:00,,,,NBPs:.    NBPd:.    ABPs:136    ABPd:59,,89,,20,84,
+64,20220502,21:00,,,,NBPs:.    NBPd:.    ABPs:139    ABPd:62,,87,,19,88,37.5
+64,20220502,22:00,,,,NBPs:.    NBPd:.    ABPs:143    ABPd:63,,88,,17,89,36.2
+64,20220503,00:00,1,10,1 _PCN  _Yeast-like,NBPs:.    NBPd:.    ABPs:145    ABPd:64,,85,,16,91,
+64,20220503,00:00,1,10,1 _PCN  _Candida glabrata (Torulopsis glabrata),NBPs:.    NBPd:.    ABPs:145    ABPd:64,,85,,16,91,
+64,20220503,01:00,,,,NBPs:122    NBPd:69    ABPs:154    ABPd:68,,90,87,21,97,36
+64,20220503,03:00,,,,NBPs:.    NBPd:.    ABPs:131    ABPd:59,,83,,18,83,
+64,20220503,04:00,,,,NBPs:.    NBPd:.    ABPs:152    ABPd:67,,87,,18,95,36.6
+64,20220503,06:00,,,,NBPs:.    NBPd:.    ABPs:162    ABPd:71,,87,,19,101,
+64,20220503,07:00,,,,NBPs:.    NBPd:.    ABPs:144    ABPd:63,,88,,21,90,
+64,20220503,09:00,,,,NBPs:.    NBPd:.    ABPs:144    ABPd:62,,88,,20,89,37.1
+64,20220503,10:00,,,,NBPs:.    NBPd:.    ABPs:150    ABPd:65,,90,,18,93,
+64,20220503,12:00,,,,NBPs:.    NBPd:.    ABPs:152    ABPd:69,,92,,17,97,
+64,20220503,13:00,,,,NBPs:.    NBPd:.    ABPs:137    ABPd:61,,92,,24,86,37.2
+64,20220503,15:00,,,,NBPs:.    NBPd:.    ABPs:140    ABPd:61,,89,,18,87,
+64,20220503,16:00,,,,NBPs:141    NBPd:64    ABPs:149    ABPd:66,,91,90,20,93,36.1
+64,20220503,18:00,,,,NBPs:.    NBPd:.    ABPs:156    ABPd:69,,96,,21,98,
+64,20220503,19:00,,,,NBPs:.    NBPd:.    ABPs:152    ABPd:65,,93,,20,94,
+64,20220503,21:00,,,,NBPs:.    NBPd:.    ABPs:150    ABPd:64,,91,,21,93,35.5
+64,20220503,22:00,,,,NBPs:.    NBPd:.    ABPs:148    ABPd:64,,91,,20,92,
+64,20220504,00:00,1,10,1 _SP   _Mold,NBPs:.    NBPd:.    ABPs:153    ABPd:69,,89,,19,97,
+64,20220504,00:00,1,10,1 _SP   _Aspergillus sp,NBPs:.    NBPd:.    ABPs:153    ABPd:69,,89,,19,97,
+64,20220504,01:00,,,,NBPs:.    NBPd:.    ABPs:156    ABPd:68,,90,,20,97,37
+64,20220504,03:00,,,,NBPs:.    NBPd:.    ABPs:153    ABPd:63,,89,,22,93,
+64,20220504,04:00,,,,NBPs:.    NBPd:.    ABPs:160    ABPd:68,,90,,21,98,37.2
+64,20220504,06:00,,,,NBPs:.    NBPd:.    ABPs:156    ABPd:68,,97,,25,97,
+64,20220504,07:00,,,,NBPs:.    NBPd:.    ABPs:147    ABPd:66,,90,,22,93,
+64,20220504,09:00,,,,NBPs:.    NBPd:.    ABPs:154    ABPd:69,,103,,18,97,36.6
+64,20220504,10:00,,,,NBPs:.    NBPd:.    ABPs:141    ABPd:66,,94,,23,91,
+64,20220504,12:00,,,,NBPs:.    NBPd:.    ABPs:124    ABPd:59,,97,,26,81,
+64,20220504,13:00,,,,NBPs:.    NBPd:.    ABPs:110    ABPd:54,,97,,22,73,36.7
+64,20220504,15:00,,,,NBPs:.    NBPd:.    ABPs:93    ABPd:49,,91,,19,64,
+64,20220504,16:00,,,,NBPs:.    NBPd:.    ABPs:128    ABPd:57,,91,,23,80,36.3
+64,20220504,18:00,,,,NBPs:.    NBPd:.    ABPs:141    ABPd:62,,96,,25,88,
+64,20220504,19:00,,,,NBPs:.    NBPd:.    ABPs:142    ABPd:66,,93,,24,91,
+64,20220504,21:00,,,,NBPs:.    NBPd:.    ABPs:150    ABPd:70,,90,,19,97,36.3
+64,20220504,22:00,,,,NBPs:.    NBPd:.    ABPs:156    ABPd:72,,92,,23,100,
+64,20220505,00:00,,,,NBPs:.    NBPd:.    ABPs:162    ABPd:74,,92,,23,103,
+64,20220505,01:00,,,,NBPs:.    NBPd:.    ABPs:150    ABPd:74,,98,,22,99,36.9
+64,20220505,03:00,,,,NBPs:.    NBPd:.    ABPs:163    ABPd:73,,92,,20,103,
+64,20220505,04:00,,,,NBPs:.    NBPd:.    ABPs:162    ABPd:73,,94,,22,103,37
+64,20220505,06:00,3,8,新陳代謝,NBPs:.    NBPd:.    ABPs:161    ABPd:73,UricAcid(B):       4,95,,18,102,
+64,20220505,06:00,3,8,肝腎功能,NBPs:.    NBPd:.    ABPs:161    ABPd:73,BUN(B):      49         Creatinine(B):       2,95,,18,102,
+64,20220505,06:00,3,8,感染,NBPs:.    NBPd:.    ABPs:161    ABPd:73,CRP:      28,95,,18,102,
+64,20220505,06:00,3,8,電解質,NBPs:.    NBPd:.    ABPs:161    ABPd:73,K:       3              Na:     141,95,,18,102,
+64,20220505,06:00,3,24,CBC,NBPs:.    NBPd:.    ABPs:161    ABPd:73,AbsNeutro.#:    7353    Basophil:       1       Eosinophil:       4     Lymphocyte:       7     MCH:      29            MCHC:      31           MCV:      95,95,,18,102,
+64,20220505,07:00,,,,NBPs:.    NBPd:.    ABPs:153    ABPd:68,,94,,19,96,
+64,20220505,09:00,,,,NBPs:142    NBPd:69    ABPs:148    ABPd:66,,94,93,23,93,37.2
+64,20220505,10:00,,,,NBPs:.    NBPd:.    ABPs:150    ABPd:66,,98,,24,94,
+64,20220505,12:00,,,,NBPs:.    NBPd:.    ABPs:113    ABPd:52,,99,,20,72,
+64,20220505,13:00,,,,NBPs:.    NBPd:.    ABPs:121    ABPd:56,,99,,23,78,
+64,20220505,15:00,,,,NBPs:.    NBPd:.    ABPs:148    ABPd:65,,99,,23,93,
+64,20220505,16:00,,,,NBPs:139    NBPd:76    ABPs:140    ABPd:61,,95,97,23,87,36.8
+64,20220505,18:00,,,,NBPs:.    NBPd:.    ABPs:129    ABPd:52,,104,,21,78,
+64,20220505,19:00,,,,NBPs:.    NBPd:.    ABPs:140    ABPd:58,,105,,24,85,
+64,20220505,21:00,,,,NBPs:.    NBPd:.    ABPs:126    ABPd:58,,96,,19,81,37
+64,20220505,22:00,,,,NBPs:.    NBPd:.    ABPs:150    ABPd:67,,94,,20,95,
+64,20220506,00:00,,,,NBPs:.    NBPd:.    ABPs:127    ABPd:59,,89,,18,82,
+64,20220506,01:00,,,,NBPs:.    NBPd:.    ABPs:154    ABPd:73,,91,,18,100,37.1
+64,20220506,03:00,,,,NBPs:.    NBPd:.    ABPs:159    ABPd:72,,91,,16,101,
+64,20220506,04:00,,,,NBPs:.    NBPd:.    ABPs:125    ABPd:95,,91,,22,105,37
+64,20220506,06:00,,,,NBPs:.    NBPd:.    ABPs:162    ABPd:71,,91,,21,101,
+64,20220506,07:00,,,,NBPs:.    NBPd:.    ABPs:157    ABPd:68,,89,,19,98,
+64,20220506,09:00,,,,NBPs:.    NBPd:.    ABPs:129    ABPd:60,,95,,16,83,36.3
+64,20220506,10:00,,,,NBPs:.    NBPd:.    ABPs:149    ABPd:67,,95,,25,94,
+64,20220506,13:00,,,,NBPs:.    NBPd:.    ABPs:139    ABPd:78,,94,,23,98,36.2
+64,20220506,15:00,,,,NBPs:.    NBPd:.    ABPs:147    ABPd:65,,92,,17,92,
+64,20220506,16:00,,,,NBPs:.    NBPd:.    ABPs:136    ABPd:69,,89,,17,91,37
+64,20220506,18:00,,,,NBPs:.    NBPd:.    ABPs:129    ABPd:62,,88,,18,84,
+64,20220506,19:00,,,,NBPs:.    NBPd:.    ABPs:145    ABPd:70,,90,,22,95,
+64,20220506,21:00,,,,NBPs:.    NBPd:.    ABPs:134    ABPd:65,,89,,16,88,36.3
+64,20220506,22:00,,,,NBPs:.    NBPd:.    ABPs:166    ABPd:75,,90,,21,105,
+64,20220507,00:00,,,,NBPs:.    NBPd:.    ABPs:157    ABPd:70,,91,,20,99,
+64,20220507,01:00,,,,NBPs:148    NBPd:88    ABPs:.    ABPd:.,,94,108,20,,35.9
+64,20220507,03:00,,,,NBPs:139    NBPd:62    ABPs:.    ABPd:.,,92,88,20,,
+64,20220507,04:00,,,,NBPs:133    NBPd:74    ABPs:.    ABPd:.,,90,94,21,,35.8
+64,20220507,06:00,,,,NBPs:130    NBPd:71    ABPs:.    ABPd:.,,87,91,15,,
+64,20220507,07:00,,,,NBPs:141    NBPd:79    ABPs:.    ABPd:.,,90,99,18,,
+64,20220507,09:00,,,,NBPs:135    NBPd:74    ABPs:.    ABPd:.,,89,94,21,,36.2
+64,20220507,10:00,,,,NBPs:138    NBPd:66    ABPs:.    ABPd:.,,90,90,21,,
+64,20220507,12:00,,,,NBPs:133    NBPd:71    ABPs:.    ABPd:.,,90,92,24,,
+64,20220507,13:00,,,,NBPs:138    NBPd:73    ABPs:.    ABPd:.,,91,94,20,,36.6
+64,20220507,15:00,,,,NBPs:149    NBPd:70    ABPs:.    ABPd:.,,97,96,23,,
+64,20220507,16:00,,,,NBPs:136    NBPd:64    ABPs:.    ABPd:.,,88,88,19,,36.1
+64,20220507,18:00,,,,NBPs:134    NBPd:70    ABPs:.    ABPd:.,,94,91,16,,
+64,20220507,19:00,,,,NBPs:138    NBPd:76    ABPs:.    ABPd:.,,90,96,22,,
+64,20220507,21:00,,,,NBPs:138    NBPd:89    ABPs:.    ABPd:.,,91,105,21,,36.7
+64,20220507,22:00,,,,NBPs:155    NBPd:75    ABPs:.    ABPd:.,,91,102,22,,
+64,20220508,00:00,,,,NBPs:139    NBPd:100    ABPs:.    ABPd:.,,92,113,22,,
+64,20220508,01:00,,,,NBPs:146    NBPd:80    ABPs:.    ABPd:.,,87,102,15,,36.4
+64,20220508,03:00,,,,NBPs:155    NBPd:86    ABPs:.    ABPd:.,,93,109,17,,
+64,20220508,04:00,,,,NBPs:149    NBPd:82    ABPs:.    ABPd:.,,90,104,18,,36.2
+64,20220508,06:00,,,,NBPs:149    NBPd:92    ABPs:.    ABPd:.,,93,111,22,,
+64,20220508,07:00,,,,NBPs:152    NBPd:77    ABPs:.    ABPd:.,,95,102,23,,
+64,20220508,09:00,,,,NBPs:.    NBPd:.    ABPs:.    ABPd:.,,92,,22,,36.2
+64,20220508,10:00,,,,NBPs:146    NBPd:70    ABPs:.    ABPd:.,,91,95,19,,
+64,20220508,12:00,,,,NBPs:138    NBPd:66    ABPs:.    ABPd:.,,94,90,22,,
+64,20220508,13:00,,,,NBPs:148    NBPd:72    ABPs:.    ABPd:.,,92,97,23,,36.7
