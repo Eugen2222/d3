@@ -1,7 +1,7 @@
 let iconMapUrl='./iconPaths.csv';
 let thresholdsUrl='./lineChartBound.csv';
-
-let testMode=false;
+let displayLimit=800;
+let testMode=true;
 let thresholdTest=
 "variable,lower_bound,upper_bound,range_0,range_1,color\n"+
 "HR,50,120,30,220,8DD3F6\n"+
@@ -59,8 +59,8 @@ let testData=
       {"label":"BT"}]
       ,
     "data":[
-      ["64","20220421","00:00","2","9","Micafungin(IV)(1) Piperacillin(IV)(1) Teicoplanin(IV)(4)","NBPs:144    NBPd:91    ABPs:.    ABPd:.","","","109","20","","37.3"],
-["64","20220421","00:00","4","7","INTUBATION","NBPs:144    NBPd:91    ABPs:.    ABPd:.","","","109","20","","37.3"],
+      ["64","20220421","00:00","2","9","Micafungin(IV)(1) Piperacillin(IV)(1) Teicoplanin(IV)(4)","NBPs:144    NBPd:91    ABPs:.    ABPd:.","","","109.2222222","20","","37.3"],
+["64","20220421","00:00","4","7","INTUBATION","NBPs:144    NBPd:91    ABPs:.    ABPd:.","","","109.111111111111","20","","37.3"],
 ["64","20220421","00:00","4","7","ENDOTRACHEAL TUBE ","NBPs:144    NBPd:91    ABPs:.    ABPd:.","","","109","20","","37.3"],
 ["64","20220421","00:00","8","3","BLOOD TRANSFUSION","NBPs:144    NBPd:91    ABPs:.    ABPd:.","","","109","20","","37.3"],
 ["64","20220421","00:00","10","17","","NBPs:144    NBPd:91    ABPs:.    ABPd:.","","","109","20","","37.3"],
@@ -460,6 +460,7 @@ let period_value=0;
 let clickZIndex = 5;
 let defaultZIndex=1;
 let clickedEleIndex=-1;
+let clickedEleBorderColor="";
 let selectBorderWidth=5;
 let clickedBorderStyle="";
 let timelineCardVerticalGap=40;
@@ -696,6 +697,22 @@ function lineChart(data,dateArray,columns,thresholds,contentIndex) {
   //remove old
   let containerHeight= lineChartHeight;
   console.log(data);  
+  let leftP = d3.select(".svg-left")
+  const leftPMove = () => {
+    var y = window.scrollY;
+    console.log(leftP)
+  
+    if (y >= 10){
+      leftP.attr("width", 0+"px");
+        return;
+    }
+    else{
+      leftP.attr("width", axisLeft+"px");
+        // note that this is a class defined in your CSS.
+    }
+  }
+
+  window.removeEventListener("scroll",leftPMove );
   d3.select(".svg-container").remove();
   d3.select("svg").selectAll("circle").remove();
   
@@ -760,7 +777,7 @@ function lineChart(data,dateArray,columns,thresholds,contentIndex) {
 xAxis = d3.axisBottom()
     .scale(xScale)
 
-let svgContainer =d3.select("div#chartId")
+let svgContainer =d3.select("div#lineChart")
 .style('height',containerHeight+'px')
   .style('width',containerWidth+'px')
   .append("div")
@@ -795,7 +812,9 @@ let svgContainer =d3.select("div#chartId")
     .style('fill','white')
     .on("click", function(d){
       console.log("default");
+      
       postDefaultSelectionMessage(VA_RESULT_NAME,defaultSelections);
+      
     });
 
 
@@ -803,7 +822,13 @@ let svgContainer =d3.select("div#chartId")
     .classed("svg-left", true)
     .attr("height",axisBaseHeight+10+"px")
     .attr("width", axisLeft+"px")
- 
+    leftP= d3.select(".svg-left")
+   
+
+    window.addEventListener("scroll",leftPMove );
+
+
+
     
     svgContainer.append("svg")
     .classed("svg-right", true)
@@ -828,7 +853,7 @@ let svgContainer =d3.select("div#chartId")
     dataColumns = columns.slice(startColIndex)
     //right legend
 
-    let mouseOverDiv = d3.select("#chartId").append("div")
+    let mouseOverDiv = d3.select("#lineChart").append("div")
 
     .attr("class", "tooltip")
     .style("opacity", 0);
@@ -924,7 +949,6 @@ function drawLineAndPoint(columnName,data,color,i,xScale,threshold,mouseOverDiv,
 
 // console.log(sumstat)
 
-
 // var body = d3.select('body');
 
 //    body.append('input')
@@ -933,18 +957,11 @@ function drawLineAndPoint(columnName,data,color,i,xScale,threshold,mouseOverDiv,
 //        .attr('name','textInput')
 //        .attr('value','Text goes here').attr("transform", "translate("+startLeft+",0)") ;
 
-   
 //    body.append('input')
 //        .attr('type','text')
 //        .attr('id','thresholdLow'+i)
 //        .attr('name','textInput')
 //        .attr('value','Text goes here').attr("transform", "translate("+startLeft+",0)") ;
-
-
-
-
-
-
 
 
 var yMax=(Math.floor(d3.max(data,d=>{
@@ -1029,10 +1046,15 @@ for(let k=0;k<data.length;++k ){
   
 }
 
+//non-continue line 
+
 // data.map(function(d) { 
 //   yValue=d[i];
 //   if (isNaN(d[i])) yValue=null;
 //   return {x:d[dateIndex]+d[timeIndex],y:yValue} });
+
+
+
 var svg=d3.select("svg");
 svg
   // .selectAll(".line")
@@ -1068,15 +1090,15 @@ svg.selectAll(".circle"+i)
   })
 .attr("cy", d =>  yScale(d[i]))
 .style("fill", d => {
- 
+  console.log(d[i]+" "+parseFloat(d[i]))
    try { // statements to try
 
-    if (parseInt(d[i])>threshold.upper_bound){
+    if (parseFloat(d[i])>threshold.upper_bound){
       // console.log(d[i]+">"+threshold.upper_bound)
       return "Crimson";
       return getColor(i,threshold,color);
       return color(i); 
-    }else if (parseInt(d[i])<threshold.lower_bound){
+    }else if (parseFloat(d[i])<threshold.lower_bound){
       // return "yellow";
       // console.log(d[i]+"<"+threshold.lower_bound)
       return "Crimson";
@@ -1090,10 +1112,10 @@ svg.selectAll(".circle"+i)
 })
    .style("stroke", d => { 
     try {
-    if (parseInt(d[i])>threshold.upper_bound){
+    if (parseFloat(d[i])>threshold.upper_bound){
       console.log(d[i]+">"+threshold.upper_bound)
       return "Crimson";
-    }else if (parseInt(d[i])<threshold.lower_bound){
+    }else if (parseFloat(d[i])<threshold.lower_bound){
         // return "yellow";
         console.log(d[i]+"<"+threshold.lower_bound)
         return "Crimson";
@@ -1122,16 +1144,18 @@ svg.selectAll(".circle"+i)
           .style("left", (x+10) + "px")
           .style("top", (y -3) + "px")
           .style("z-index", 5);
-    
+          let value =Math.round(d[i] * 100) / 100;
           try { // statements to try
             let temContent=d[contentIndex]
             if (temContent=="(遺漏值)"){
               temContent=""
             }
-            mouseOverDiv.html(columnName+":"+ d[i]+ "<br>"+ d[dateIndex]+" "+d[timeIndex]+ "<br>"+temContent+ "<br>up:"+threshold.upper_bound+ " <br>low:"+threshold.lower_bound)
+			
+			mouseOverDiv.html(columnName+":"+ value+ "<br>"+ d[dateIndex]+" "+d[timeIndex]+ "<br>"+temContent)
+            
           }
           catch (e) {
-            mouseOverDiv.html(columnName+":"+ d[i])        
+            mouseOverDiv.html(columnName+":"+ value)        
           }  
         line.attr("stroke-width", lineChartLineWidth*1.5);
         })
@@ -1203,19 +1227,19 @@ const card_horizen_gap=5;
 const invisible_pos=-9999;
 let p_border_color="";
 
-var zoom = d3.zoom()
-  .scaleExtent([0.1, 3 ])
-  .on('zoom', zoomed);
+// var zoom = d3.zoom()
+//   .scaleExtent([0.1, 3 ])
+//   .on('zoom', zoomed);
 
-var root = d3.select('#contain').call(zoom);
-var canvas = d3.select('#contain');
+// var root = d3.select('#contain').call(zoom);
+// var canvas = d3.select('#contain');
 
-function zoomed() {
-  var transform = d3.event.transform;
-  console.log( d3.event.transform);
-  canvas.style("transform", "translate("+transform.x+"px,"+transform.y+"px) scale(" + transform.k + ")")
-  .style("transition", "transform 30ms ease-in-out 0s");
-}
+// function zoomed() {
+//   var transform = d3.event.transform;
+//   console.log( d3.event.transform);
+//   canvas.style("transform", "translate("+transform.x+"px,"+transform.y+"px) scale(" + transform.k + ")")
+//   .style("transition", "transform 30ms ease-in-out 0s");
+// }
 
 
 
@@ -1518,14 +1542,18 @@ function createPanel(top_pos,layer_num, item_h) {
 
 
 function build_time_panel(data,dateArray,contentIndex){
+
+  let card_border_width=2;
+  let card_padding_width=5;
+  let card_max_width=200;
   //adjust position
-  d3.select("#contain").remove();
+  d3.select("#timelineChart").remove();
 
   let container=
   d3.select("div#base")
   .append("div")
-  .attr("id", "contain")
-  .style("overflow","auto");
+  .attr("id", "timelineChart")
+  .style("overflow","visible");
   // // Container class to make it responsive.
 
   container
@@ -1539,6 +1567,17 @@ function build_time_panel(data,dateArray,contentIndex){
   .on("click", function(d){
     console.log("default");
     postDefaultSelectionMessage(VA_RESULT_NAME,defaultSelections);
+    if (clickedEleIndex>=0){
+            
+      d3.select("#dot"+clickedEleIndex)
+      .style("z-index", defaultZIndex);
+      d3.select("#line"+clickedEleIndex)
+      .style("z-index", defaultZIndex);
+      d3.select("#card"+clickedEleIndex)
+      .style("z-index", defaultZIndex)
+      .style('border',d=>card_border_width+size_type+" #"+clickedEleBorderColor+" solid")
+      // .style("border", selectBorderWidth+size_type);
+    }
   });
 
 
@@ -1548,14 +1587,14 @@ function build_time_panel(data,dateArray,contentIndex){
   .attr("class", "tooltip")
   .style("opacity", 0);
   
-  let divArray=["month","day_sec","type_sec","dot_sec","card_sec","line_sec","event_sec"];
+  let divArray=["day_sec","type_sec","dot_sec","card_sec","line_sec","event_sec"];
 
   divArray.forEach(function(value){
     container
     .append("div")
     .attr("id", value)
   });
-  d3.select("#contain")
+  d3.select("#timelineChart")
   .style('left',axisLeft+size_type)
   // .style('height',containerHeight+'px')
   .style('width',containerWidth+'px')
@@ -1576,7 +1615,7 @@ function build_time_panel(data,dateArray,contentIndex){
   for (let i = 0 ; i< month_array.length; i++){
     console.log(month_array[i][0]);
     let a =[];
-    a[0]=month_array[i][0].toString();
+    let monthValue=month_array[i][0].toString().split(' ')[1];
 
     
     let dayWidthNoPadding=dayWidth-2*date_p_padding
@@ -1586,7 +1625,7 @@ function build_time_panel(data,dateArray,contentIndex){
       .append("div")
       .merge(date_p)
       
-      .style('width',dayWidthNoPadding+size_type).style('height','20px').style('display', 'inline-block')
+      .style('width',dayWidthNoPadding+size_type).style('display', 'inline-block')
       .style('padding',date_p_padding+size_type)
       .style('background-color',p_background_color)
       .style('color',p_word_color)
@@ -1594,7 +1633,7 @@ function build_time_panel(data,dateArray,contentIndex){
       .text(d=>
         // console.log(d.date());
         // return (d.date()%interval===1)? d.date().toString():""}
-        d.date().toString())
+        monthValue+" "+d.date().toString())
       .each(function(d,i) {
         // if (d.date()%interval===1) {
           d3.select(this)
@@ -1636,19 +1675,19 @@ function build_time_panel(data,dateArray,contentIndex){
       //   }
       // });
       month_width=(dayWidth)*month_array[i].length-2*date_p_padding;
-    month_p
-    .data(a)
-    .enter()
-    .append("div")
-    .merge(month_p)
-    .text(d=>d.split(' ')[1])
-    .style('width',month_width+size_type).style('padding',date_p_padding+size_type)
-    .style('background-color',p_background_color)
-    .style('border-bottom',date_p_l_border+size_type+border_color)
-    .style('border-left',date_p_l_border+size_type+border_color)
-    .style('border-top',date_p_l_border+size_type+border_color)
-    .style('padding-left',date_p_padding-date_p_l_border+size_type )
-    .style('color',p_word_color);
+    // month_p
+    // .data(a)
+    // .enter()
+    // .append("div")
+    // .merge(month_p)
+    // .text(d=>d.split(' ')[1])
+    // .style('width',month_width+size_type).style('padding',date_p_padding+size_type)
+    // .style('background-color',p_background_color)
+    // .style('border-bottom',date_p_l_border+size_type+border_color)
+    // .style('border-left',date_p_l_border+size_type+border_color)
+    // .style('border-top',date_p_l_border+size_type+border_color)
+    // .style('padding-left',date_p_padding-date_p_l_border+size_type )
+    // .style('color',p_word_color);
     y_ruler_length=y_ruler_length+(date_p_padding*2+gap)*month_array[i].length;
     
   }
@@ -1714,9 +1753,7 @@ function build_time_panel(data,dateArray,contentIndex){
       
   }
 
-  let card_border_width=2;
-  let card_padding_width=5;
-  let card_max_width=200;
+
   function no_dots(type){
     return type==="class_bar_start"||type==="class_bar_end";
   }
@@ -1748,7 +1785,8 @@ function build_time_panel(data,dateArray,contentIndex){
   //   console.log(card_model_array[i]);
   // };
   let dot_r=5;
-  let day_bottom_h = document.getElementById('day_sec').children[0].offsetBottom;
+  let day_bottom_h = document.getElementById('day_sec').children[0].offsetTop+
+  document.getElementById('day_sec').children[0].offsetHeight;
 
   d3.select("#dot_sec").selectAll("div")
   .data(card_model_array)
@@ -1827,10 +1865,10 @@ function build_time_panel(data,dateArray,contentIndex){
     .on("mouseover",  function(event) { 
       console.log(event);
       console.log(row);
-
-  
+      let scrollT=window.scrollY;
+      console.log(scrollT);
       let x =event.pageX-axisLeft;
-      let y =event.pageY-axisBaseHeight;
+      let y =event.pageY-axisBaseHeight
       // div.transition()
       mouseOverDiv
         .style("opacity", .8)
@@ -1873,10 +1911,11 @@ function build_time_panel(data,dateArray,contentIndex){
             .style("z-index", defaultZIndex);
             d3.select("#card"+clickedEleIndex)
             .style("z-index", defaultZIndex)
-            .style('border',d=>card_border_width+size_type+" #"+row.style.border_color+" solid")
+            .style('border',d=>card_border_width+size_type+" #"+clickedEleBorderColor+" solid")
             // .style("border", selectBorderWidth+size_type);
           }
           clickedEleIndex=i;
+          clickedEleBorderColor=row.style.border_color;
           console.log("click "+ clickedEleIndex)
 
           d3.select("#dot"+clickedEleIndex)
@@ -2113,6 +2152,9 @@ if (window.addEventListener) {
   window.attachEvent("onmessage", onMessage);
 }
 
+
+
+
 // Retrieve data and begin processing
 function onMessage(event) {
   if (event && event.data )
@@ -2131,7 +2173,8 @@ function onMessage(event) {
 
 
         let data = event.data.data
-        data=formatData(data,timeIndex)
+        // data=formatData(data,timeIndex)
+       
         getApi(thresholdsUrl).then((resp) => {
 
             let thresholds =  csvToArray(resp).sort(
