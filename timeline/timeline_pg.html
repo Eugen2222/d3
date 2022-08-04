@@ -9,272 +9,248 @@
 <link rel="stylesheet" href="" />
 
 </head>
-<style> 
+
 
 <style>
+    /* whole page */
+    /* webpage font */
+    body {
+        font-family: 'Noto Sans TC','Noto Sans', 'AvenirNext',Helvetica,Arial,sans-serif !important;
+    }
+     /* mouse over panel style */   
+    .tooltip{
+        font-size: 14px;
+        max-width: 120px;
+        color: black;
+        text-align: left;
+        /* border-radius: 6px; */
+        padding: 0px 0;
+        font-family:"Arial", sans-serif;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 6;
+        padding: 1px;
+        background-color: white;
+		overflow: visible;
+		overflow-wrap: normal;
+    }
+     /* transparent background panel for selection of all the data */   
+    .default{
+        position: absolute;
+        z-index: 1;
+        opacity:0;
+    }
+
+
+    /* line chart */
+    /* line chart container */
+    #lineChart {
+        height: 100%;
+    }
+        
+    /* left y axis container */
+    .svg-left {
+
+        display: inline-block;
+        position: fixed;
+        z-index: 1;
+        
+        background: rgba(255, 255, 255, .92);
+        left: 0;
+    }
+
+    /* line chart y axis style */
      .axis path{
          stroke:black;
          stroke-width:1px ;
 
      }   
-
+    /*  line chart y axis bar style */
      .axis line{
          stroke: black;
          stroke-width: 1px;
      } 
-  
+    /* line chart y axis text style */
      .axis text{
 
          /* font-weight: bold; */
          font-size: 12px;
-         font-family:"Arial Black" sans-serif;
+
      } 
-
+    /* line chart right legend text style */
      .legend text{
-
-         font-family:"Arial", sans-serif;
          font-size: 12px;
      }
 
-
-body {
-        font-family: 'Noto Sans TC','Noto Sans', 'AvenirNext',Helvetica,Arial,sans-serif !important;
-}
-
-.tooltip{
-  font-size: 12px;
-  width: 120px;
-  color: black;
-  text-align: left;
-  /* border-radius: 6px; */
-  padding: 0px 0;
-  font-family:"Arial", sans-serif;
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 6;
-  padding: 1px;
-  background-color: white;
-}
-
-
-.svg-container {
-
-  display: inline-block;
-  position: relative;
-  height: 100%;
-  width:100%;
- /* aspect ratio */
-  vertical-align: top;
-
-}
-
-.svg-container circle{
-
-    display: inline-block;
-    position: relative;
-    height: 100%;
-    width:100%;
-   /* aspect ratio */
-    vertical-align: top;
-    z-index: 3;
-  }
-
-.svg-content-responsive {
-
-  display: inline-block;
-  position: absolute;
-  height: 100%;
-    width: 100%;
- 
-  left: 0;
-}
-
-.svg-left {
-
-    display: inline-block;
-    position: fixed;
-    z-index: 1;
-      
-      background: rgba(255, 255, 255, .92);
-    left: 0;
-  }
-
-#chartId {
-
-  height: 100%;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    #month {
-    display:inline-block;
+    /* line chart  container */
+    .svg-container {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        width:100%;
+        /* aspect ratio */
+        vertical-align: top;
     }
-#month div{
-    display: inline-block;
+    /* line chart circle */
+    .svg-container circle{
 
-    background-color:orange;
-    color:white;
-    padding :20px;
-    margin-left :0px;
-    margin-right: 0px;
-    width:100px;
-    height:20px;
-    text-align:left;
-    z-index: -1;
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        width:100%;
+    /* aspect ratio */
+        vertical-align: top;
+        z-index: 3;
+    }
 
-}
+    /* line chart display container */
+    .svg-content-responsive {
 
-
-
-
-#month svg{
-    display: inline-block;
-    position: absolute; 
-
-    color:white;
-    padding :20px;
-    top:0;
-    left:0;
-    margin-left :0px;
-    margin-right: 0px;
-    width:100px;
-    height:100px;
-    text-align:center;
-    z-index: 0;
-
-}
- #contain {
-     position: relative;
-  
-
-     }
-
-#day_sec div{
-
-
-    background-color:black;
-    color:white;
-
-    margin-left :0px;
-    margin-right: 0px;
-    width:100px;
-    height:100px;
-    text-align:left;
-    z-index: -1;
-    vertical-align: bottom;
-}    
-
-
-#type_sec div{
-
-    position:relative;
-    background-color:#f2f9ff;
-    color:white;
-
-    margin-left :0px;
-    margin-right: 0px;
-    width:100px;
-    height:100px;
-    text-align:center;
-    <!-- z-index: -1; -->
-vertical-align: bottom;
-}   
-
-
-#event_sec div{
-
-
-    background-color:#f2f9ff;
-    color:white;
-
-    margin-left :0px;
-    margin-right: 0px;
-    width:100px;
-    height:100px;
-    text-align:center;
-    <!-- z-index: -1; -->
-vertical-align: bottom;
-}   
-
-#day_sec {
-    width:100%;
-  
-        z-index: -1;
-}
-
-#dot_sec{
-
-}
-#dot_sec div{
-    background-color:#fff;
-    border-radius:5px;
-    position:absolute;
-    content:"";
-    height:10px;
-    z-index: 1; 
-    top:80px;
-   
-vertical-align: bottom;
-}    
-
-
-#card_sec div{
-    background-color:white;
-    border-radius:2px;
-    color: black;
-    content:"";
-
-    position:absolute;
-    padding :5px;
-   border:2px black solid;
-    z-index: 1;
-    overflow-x:auto;
-    overflow-y:auto;
-    max-height: 60px;
-    max-width: 200px;
-}    
-#line_sec div{
-    background-color:white;
-    z-index: 0;   
-    color: black;
-    content:"";
-    height:20px;
-    width:1.5px;
-    position:absolute;
-
-}    
-
-#card_sec img{
-    width:20px;
-    height:20px;
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
     
+        left: 0;
+    }
 
-}    
 
-.default{
-    position: absolute;
-    z-index: 1;
-    opacity:0;
-}
+
+
+
+    /* time line chart */
+    /* card text style */
+    #card_sec text{
+        font-size: 12px;
+    }
+    /* card  style */
+    #card_sec div{
+
+        background-color:white;
+        border-radius:2px;
+        color: black;
+        content:"";
+
+        position:absolute;
+        padding :5px;
+        border:2px black solid;
+        z-index: 1;
+         /* overflow-x:auto; */
+        overflow-y:hidden;
+		overflow-wrap: normal;
+        max-height: 80px;
+        max-width: 150px;
+    }    
+    /* card icon style */
+    #card_sec img{
+        width:20px;
+        height:20px;
+    }    
+
+
+    /* timeline chart container*/    
+    #timelineChart {
+        position: relative;
+   
+    }
+    /* month container style */
+    #month {
+        display:inline-block;
+        z-index: -1;
+    }
+    /* month  style */
+    #month div{
+        display: inline-block;
+        padding :20px;
+        margin-left :0px;
+        margin-right: 0px;
+        width:100px;
+        height:20px;
+        text-align:left;
+    }
+
+    /* day container style */
+    #day_sec {
+        width:100%;
+        z-index: -1;
+    }
+
+    /* day style */    
+    #day_sec div{
+        background-color:black;
+        color:white;
+        margin-left :0px;
+        margin-right: 0px;
+
+        height:15px;
+        text-align:left;
+        z-index: -1;
+        vertical-align: bottom;
+        font-size: 10px
+        ;
+    }    
+
+
+    /* card panel style */   
+    #type_sec div{
+        position:relative;
+        background-color:#f2f9ff;
+        color:white;
+        margin-left :0px;
+        margin-right: 0px;
+        width:100px;
+        height:100px;
+        text-align:center;
+        vertical-align: bottom;
+    }   
+
+
+      /*  #event_sec div{
+        background-color:#f2f9ff;
+        color:white;
+        margin-left :0px;
+        margin-right: 0px;
+        width:100px;
+        height:100px;
+        text-align:center;
+        vertical-align: bottom;
+    }    */  
+
+  
+    /* dot style */   
+    #dot_sec div{
+        background-color:#fff;
+        border-radius:5px;
+        position:absolute;
+        content:"";
+        height:10px;
+        z-index: 1; 
+        top:80px;
+    
+        vertical-align: bottom;
+    }    
+
+
+    /* line style */   
+    #line_sec div{
+        background-color:white;
+        z-index: 0;   
+        color: black;
+        content:"";
+        height:20px;
+        width:1.5px;
+        position:absolute;
+
+    }    
+
+
+
 
 </style>
 <body>
 
     <div id="base">
-        <div id="chartId">
+        <div id="lineChart">
 
         </div>
  
